@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="junctions-04" role="img" aria-labelledby="title-junctions-04">
+  <title id="title-junctions-04">Tram tracks cross — Track vehicle priority needs a local check</title>
+  <rect width="640" height="295" fill="#d6b66d"/><rect x="0" y="103" width="640" height="110" fill="#41433f"/>
+        <g transform="rotate(-18 320 148)"><path d="M0 88H640M0 208H640" stroke="#3a2d29" stroke-width="13"/><path d="M20 92V204M70 92V204M120 92V204M170 92V204M220 92V204M270 92V204M320 92V204M370 92V204M420 92V204M470 92V204M520 92V204M570 92V204M620 92V204" stroke="#d3b276" stroke-width="10"/></g>
+        <path d="M130 52V183M130 78L258 146" stroke="#243d42" stroke-width="12"/><circle cx="130" cy="48" r="28" fill="#c54535"/>
+        <rect x="350" y="39" width="234" height="68" rx="12" fill="#243d42"/>
+        <text x="467" y="84" fill="#fffaf0" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" letter-spacing="1">TRAM</text>
+  <rect y="295" width="640" height="65" fill="#243d42"/>
+  <text x="608" y="323" fill="#c54535" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · RAIL</text>
+  <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Track vehicle priority needs a local check</tspan></text>
+</svg>

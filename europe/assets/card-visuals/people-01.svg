@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="people-01" role="img" aria-labelledby="title-people-01">
+  <title id="title-people-01">Every fitted belt — Fasten every fitted seat belt</title>
+  <rect width="640" height="295" fill="#98c5b8"/><path d="M102 244V86Q102 48 140 48H236Q274 48 274 86V244Z" fill="#4b806c" stroke="#234b3f" stroke-width="7"/>
+        <path d="M108 64L270 236" stroke="#f6d26b" stroke-width="16"/><rect x="258" y="218" width="34" height="42" rx="7" fill="#bd4e3a"/>
+        <path d="M390 238V120Q390 84 426 84H498Q534 84 534 120V238Z" fill="#fff9ea" stroke="#234b3f" stroke-width="7"/>
+        <circle cx="462" cy="127" r="29" fill="#bd4e3a"/><path d="M422 182H502" stroke="#234b3f" stroke-width="13"/>
+        <rect x="320" y="35" width="264" height="62" rx="12" fill="#234b3f"/>
+        <text x="452" y="77" fill="#fff9ea" font-family="Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" letter-spacing="1">ALL SEATS</text>
+  <rect y="295" width="640" height="65" fill="#234b3f"/>
+  <text x="608" y="323" fill="#bd4e3a" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · SEAT</text>
+  <text x="32" y="320" fill="#fff9ea" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Fasten every fitted seat belt</tspan></text>
+</svg>

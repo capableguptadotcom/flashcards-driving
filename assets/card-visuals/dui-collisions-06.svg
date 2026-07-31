@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="dui-collisions-06" role="img" aria-labelledby="title-dui-collisions-06">
+  <title id="title-dui-collisions-06">The coverage trio — California liability coverage trio</title>
+  <rect width="640" height="295" fill="#a9c2df"/><rect x="72" y="38" width="316" height="224" rx="14" fill="#fff9eb" stroke="#273f67" stroke-width="6"/>
+        <path d="M110 88H322M110 126H284M110 164H322M110 202H248" stroke="#4f739c" stroke-width="11" stroke-linecap="round"/>
+        <path d="M470 53L556 86V151Q556 221 470 258Q384 221 384 151V86Z" fill="#273f67" stroke="#d75b36" stroke-width="10"/>
+        <text x="470" y="168" fill="#fff9eb" font-family="Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" letter-spacing="1">30 / 60 / 15</text>
+  <rect y="295" width="640" height="65" fill="#273f67"/>
+  <text x="608" y="323" fill="#d75b36" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · INSURANCE</text>
+  <text x="32" y="320" fill="#fff9eb" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">California liability coverage trio</tspan></text>
+</svg>

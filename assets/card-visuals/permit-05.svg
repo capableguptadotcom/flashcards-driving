@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="permit-05" role="img" aria-labelledby="title-permit-05">
+  <title id="title-permit-05">The provisional midnight snack — First-year overnight restriction</title>
+  <rect width="640" height="295" fill="#163b32"/>
+        <circle cx="320" cy="144" r="106" fill="#fff8e9" stroke="#d85c3d" stroke-width="12"/>
+        <g stroke="#2f725d" stroke-width="6"><path d="M320 52V72M320 216V236M228 144H248M392 144H412"/></g>
+        <path d="M320 144L320 84M320 144L368 168" stroke="#163b32" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="320" cy="144" r="10" fill="#d85c3d"/>
+        <rect x="228" y="118" width="184" height="52" rx="10" fill="#163b32" opacity=".92"/>
+        <text x="320" y="155" fill="#fff8e9" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" letter-spacing="1">11–5</text>
+  <rect y="295" width="640" height="65" fill="#163b32"/>
+  <text x="608" y="323" fill="#d85c3d" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · CLOCK</text>
+  <text x="32" y="320" fill="#fff8e9" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">First-year overnight restriction</tspan></text>
+</svg>

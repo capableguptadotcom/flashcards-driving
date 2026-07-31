@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="right-way-05" role="img" aria-labelledby="title-right-way-05">
+  <title id="title-right-way-05">One more lap — Circle again after a missed exit</title>
+  <rect width="640" height="295" fill="#b8cfad"/>
+        <path d="M0 121H214M426 121H640M320 0V55M320 239V295" stroke="#3f4145" stroke-width="76"/>
+        <circle cx="320" cy="147" r="114" fill="#3f4145"/><circle cx="320" cy="147" r="54" fill="#74608d"/>
+        <path d="M259 90A82 82 0 0 1 384 102M390 108L372 84M380 105L408 92" fill="none" stroke="#fff0a2" stroke-width="8" stroke-linecap="round"/>
+        <g transform="translate(243 184) rotate(-40) scale(0.65)">
+    <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#d35c43" stroke="#172a27" stroke-width="3"/>
+    <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
+    <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
+  </g>
+        <rect x="244" y="121" width="152" height="52" rx="10" fill="#43385f"/>
+        <text x="320" y="156" fill="#fff9ef" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">ONE MORE</text>
+  <rect y="295" width="640" height="65" fill="#43385f"/>
+  <text x="608" y="323" fill="#d35c43" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · ROUNDABOUT</text>
+  <text x="32" y="320" fill="#fff9ef" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Circle again after a missed exit</tspan></text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="permit-09" role="img" aria-labelledby="title-permit-09">
+  <title id="title-permit-09">The cracked-windshield check — Unobstructed windshield for the test</title>
+  <rect width="640" height="295" fill="#a9c8ca"/>
+    <circle cx="500" cy="62" r="34" fill="#f5d56b"/>
+    <path d="M0 154L110 80L214 166L310 88L420 170L530 75L640 158V295H0Z" fill="#c7d5ae"/>
+    <path d="M230 295L294 132H346L414 295Z" fill="#3c4341"/>
+    <path d="M319 144V280" stroke="#fff2a8" stroke-width="7" stroke-dasharray="20 19"/>
+        <g transform="translate(320 231) rotate(0) scale(1.25)">
+    <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#d85c3d" stroke="#172a27" stroke-width="3"/>
+    <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
+    <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
+  </g><g transform="translate(385 166) rotate(0) scale(0.65)">
+    <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#2f725d" stroke="#172a27" stroke-width="3"/>
+    <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
+    <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
+  </g>
+        <rect x="76" y="54" width="224" height="66" rx="12" fill="#163b32"/>
+        <text x="188" y="98" fill="#fff8e9" font-family="Arial, sans-serif" font-size="38" font-weight="800" text-anchor="middle" letter-spacing="1">CLEAR</text>
+  <rect y="295" width="640" height="65" fill="#163b32"/>
+  <text x="608" y="323" fill="#d85c3d" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · VEHICLE</text>
+  <text x="32" y="320" fill="#fff8e9" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Unobstructed windshield for the test</tspan></text>
+</svg>

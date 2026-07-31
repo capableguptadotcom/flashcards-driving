@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="borders-09" role="img" aria-labelledby="title-borders-09">
+  <title id="title-borders-09">The clean-looking city — City access may require registration or sticker</title>
+  <rect width="640" height="295" fill="#fff9ea"/><path d="M0 60L155 20L300 66L468 20L640 72V260L480 282L310 246L156 282L0 246Z" fill="#98c5b8" opacity=".65"/>
+        <path d="M78 210C148 70 254 255 322 116S486 230 570 70" fill="none" stroke="#bd4e3a" stroke-width="14" stroke-linecap="round" stroke-dasharray="2 24"/>
+        <circle cx="78" cy="210" r="16" fill="#234b3f"/><circle cx="570" cy="70" r="20" fill="#234b3f"/>
+        <rect x="190" y="104" width="260" height="74" rx="12" fill="#234b3f"/>
+        <text x="320" y="153" fill="#fff9ea" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" letter-spacing="1">LEZ</text>
+  <rect y="295" width="640" height="65" fill="#234b3f"/>
+  <text x="608" y="323" fill="#bd4e3a" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · MAP</text>
+  <text x="32" y="320" fill="#fff9ea" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">City access may require registration or</tspan><tspan x="32" dy="23">sticker</tspan></text>
+</svg>

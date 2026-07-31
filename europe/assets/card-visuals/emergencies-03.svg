@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="emergencies-03" role="img" aria-labelledby="title-emergencies-03">
+  <title id="title-emergencies-03">Language at 112 — Give clear facts without assuming language</title>
+  <rect width="640" height="295" fill="#273f67"/><path d="M0 240Q320 120 640 240V295H0Z" fill="#3d4148"/>
+        <rect x="225" y="32" width="190" height="228" rx="25" fill="#fff9eb" stroke="#d75b36" stroke-width="10"/>
+        <rect x="250" y="65" width="140" height="132" rx="10" fill="#a9c2df"/>
+        <text x="320" y="139" fill="#273f67" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">LOCATION</text><circle cx="320" cy="226" r="12" fill="#4f739c"/>
+        <path d="M190 40L450 266" stroke="#d75b36" stroke-width="14" opacity=".88"/>
+  <rect y="295" width="640" height="65" fill="#273f67"/>
+  <text x="608" y="323" fill="#d75b36" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · PHONE</text>
+  <text x="32" y="320" fill="#fff9eb" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Give clear facts without assuming language</tspan></text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="emergencies-11" role="img" aria-labelledby="title-emergencies-11">
+  <title id="title-emergencies-11">No claim planned — Tell the insurer even without a claim</title>
+  <rect width="640" height="295" fill="#c8b6d8"/><rect x="72" y="38" width="316" height="224" rx="14" fill="#fff9ef" stroke="#43385f" stroke-width="6"/>
+        <path d="M110 88H322M110 126H284M110 164H322M110 202H248" stroke="#74608d" stroke-width="11" stroke-linecap="round"/>
+        <path d="M470 53L556 86V151Q556 221 470 258Q384 221 384 151V86Z" fill="#43385f" stroke="#d35c43" stroke-width="10"/>
+        <text x="470" y="168" fill="#fff9ef" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">REPORT</text>
+  <rect y="295" width="640" height="65" fill="#43385f"/>
+  <text x="608" y="323" fill="#d35c43" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · INSURANCE</text>
+  <text x="32" y="320" fill="#fff9ef" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Tell the insurer even without a claim</tspan></text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="people-08" role="img" aria-labelledby="title-people-08">
+  <title id="title-people-08">Passing a bicycle — Use the local minimum and real clearance</title>
+  <rect width="640" height="295" fill="#c9c4ad"/><rect y="190" width="640" height="105" fill="#40423d"/>
+        <g stroke="#fff" stroke-width="13"><path d="M240 190V295M286 190V295M332 190V295M378 190V295"/></g>
+        <g transform="translate(310 151) scale(0.8)" fill="#3f4435" stroke="#3f4435" stroke-linecap="round">
+    <circle cy="-23" r="9"/><path d="M0 -13V18M0 -2L-16 8M0 -2L16 8M0 18L-13 38M0 18L14 38" fill="none" stroke-width="8"/>
+  </g><g transform="translate(386 158) scale(0.65)" fill="#ca5639" stroke="#ca5639" stroke-linecap="round">
+    <circle cy="-23" r="9"/><path d="M0 -13V18M0 -2L-16 8M0 -2L16 8M0 18L-13 38M0 18L14 38" fill="none" stroke-width="8"/>
+  </g><g transform="translate(118 236) rotate(0) scale(1)">
+    <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#707c58" stroke="#172a27" stroke-width="3"/>
+    <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
+    <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
+  </g>
+        <rect x="405" y="61" width="198" height="68" rx="12" fill="#3f4435"/>
+        <text x="504" y="106" fill="#fffaf0" font-family="Arial, sans-serif" font-size="21" font-weight="800" text-anchor="middle" letter-spacing="1">PASSING SPACE</text>
+  <rect y="295" width="640" height="65" fill="#3f4435"/>
+  <text x="608" y="323" fill="#ca5639" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · PEOPLE</text>
+  <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Use the local minimum and real clearance</tspan></text>
+</svg>

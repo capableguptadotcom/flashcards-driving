@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="permit-08" role="img" aria-labelledby="title-permit-08">
+  <title id="title-permit-08">The test-day toolkit — Permit, papers, car and companion</title>
+  <rect width="640" height="295" fill="#c9c4ad"/>
+        <rect x="116" y="40" width="408" height="218" rx="18" fill="#fffaf0" stroke="#3f4435" stroke-width="5" transform="rotate(-2 320 149)"/>
+        <circle cx="184" cy="120" r="37" fill="#707c58"/><path d="M148 190Q184 146 220 190" fill="#b7c993"/>
+        <path d="M252 98H460M252 132H438M252 166H474M252 200H400" stroke="#3f4435" stroke-width="10" stroke-linecap="round" opacity=".72"/>
+        <rect x="336" y="50" width="168" height="52" rx="8" fill="#ca5639"/>
+        <text x="420" y="86" fill="#fffaf0" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">TEST DAY</text>
+  <rect y="295" width="640" height="65" fill="#3f4435"/>
+  <text x="608" y="323" fill="#ca5639" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · DOCUMENT</text>
+  <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Permit, papers, car and companion</tspan></text>
+</svg>

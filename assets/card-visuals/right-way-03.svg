@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="right-way-03" role="img" aria-labelledby="title-right-way-03">
+  <title id="title-right-way-03">The optimistic left turn — Do not trust an oncoming turn signal</title>
+  <rect width="640" height="295" fill="#d6b66d"/>
+        <path d="M0 96H640V220H0ZM258 0H382V295H258Z" fill="#41433f"/>
+        <path d="M0 158H640M320 0V295" stroke="#fff0a2" stroke-width="7" stroke-dasharray="24 20"/>
+        <path d="M218 42V82M422 214V254M42 58H218M422 238H598" stroke="#fff" stroke-width="6"/>
+        <g transform="translate(142 132) rotate(0) scale(0.8)">
+    <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#c54535" stroke="#172a27" stroke-width="3"/>
+    <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
+    <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
+  </g><g transform="translate(348 56) rotate(90) scale(0.8)">
+    <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#4c7680" stroke="#172a27" stroke-width="3"/>
+    <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
+    <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
+  </g>
+        <rect x="222" y="112" width="196" height="70" rx="12" fill="#243d42"/>
+        <text x="320" y="157" fill="#fffaf0" font-family="Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" letter-spacing="1">LEFT WAITS</text>
+  <rect y="295" width="640" height="65" fill="#243d42"/>
+  <text x="608" y="323" fill="#c54535" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · JUNCTION</text>
+  <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Do not trust an oncoming turn signal</tspan></text>
+</svg>

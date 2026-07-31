@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="emergencies-08" role="img" aria-labelledby="title-emergencies-08">
+  <title id="title-emergencies-08">An older car — Older car relies on a charged phone</title>
+  <rect width="640" height="295" fill="#3f4435"/><path d="M0 240Q320 120 640 240V295H0Z" fill="#40423d"/>
+        <rect x="225" y="32" width="190" height="228" rx="25" fill="#fffaf0" stroke="#ca5639" stroke-width="10"/>
+        <rect x="250" y="65" width="140" height="132" rx="10" fill="#c9c4ad"/>
+        <text x="320" y="139" fill="#3f4435" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" letter-spacing="1">112</text><circle cx="320" cy="226" r="12" fill="#707c58"/>
+        <path d="M190 40L450 266" stroke="#ca5639" stroke-width="14" opacity=".88"/>
+  <rect y="295" width="640" height="65" fill="#3f4435"/>
+  <text x="608" y="323" fill="#ca5639" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · PHONE</text>
+  <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Older car relies on a charged phone</tspan></text>
+</svg>

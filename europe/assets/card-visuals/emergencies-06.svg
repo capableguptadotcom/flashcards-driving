@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="emergencies-06" role="img" aria-labelledby="title-emergencies-06">
+  <title id="title-emergencies-06">What eCall sends — eCall sends crash facts, not a trip diary</title>
+  <rect width="640" height="295" fill="#fff9ef"/><path d="M0 60L155 20L300 66L468 20L640 72V260L480 282L310 246L156 282L0 246Z" fill="#c8b6d8" opacity=".65"/>
+        <path d="M78 210C148 70 254 255 322 116S486 230 570 70" fill="none" stroke="#d35c43" stroke-width="14" stroke-linecap="round" stroke-dasharray="2 24"/>
+        <circle cx="78" cy="210" r="16" fill="#43385f"/><circle cx="570" cy="70" r="20" fill="#43385f"/>
+        <rect x="190" y="104" width="260" height="74" rx="12" fill="#43385f"/>
+        <text x="320" y="153" fill="#fff9ef" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">MIN DATA</text>
+  <rect y="295" width="640" height="65" fill="#43385f"/>
+  <text x="608" y="323" fill="#d35c43" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · MAP</text>
+  <text x="32" y="320" fill="#fff9ef" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">eCall sends crash facts, not a trip diary</tspan></text>
+</svg>

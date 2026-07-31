@@ -5,6 +5,8 @@
   "description": "Separate scenario-based California and Europe driving flashcards",
   "scripts": {
     "test": "node --test",
-    "check": "node --check app.js && node --check cards.js && node --check europe/app.js && node --check europe/cards.js && node --test"
+    "generate:visuals": "node scripts/generate-card-visuals.mjs",
+    "visuals:check": "node scripts/generate-card-visuals.mjs --check",
+    "check": "node --check app.js && node --check cards.js && node --check visuals.js && node --check europe/app.js && node --check europe/cards.js && node --check europe/visuals.js && npm run visuals:check && node --test"
   }
 }

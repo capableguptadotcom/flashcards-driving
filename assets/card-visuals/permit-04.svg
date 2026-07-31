@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="permit-04" role="img" aria-labelledby="title-permit-04">
+  <title id="title-permit-04">The 50-hour odometer — Fifty hours, ten after dark</title>
+  <rect width="640" height="295" fill="#3f4435"/>
+        <circle cx="320" cy="144" r="106" fill="#fffaf0" stroke="#ca5639" stroke-width="12"/>
+        <g stroke="#707c58" stroke-width="6"><path d="M320 52V72M320 216V236M228 144H248M392 144H412"/></g>
+        <path d="M320 144L320 84M320 144L368 168" stroke="#3f4435" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="320" cy="144" r="10" fill="#ca5639"/>
+        <rect x="228" y="118" width="184" height="52" rx="10" fill="#3f4435" opacity=".92"/>
+        <text x="320" y="155" fill="#fffaf0" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">50 / 10</text>
+  <rect y="295" width="640" height="65" fill="#3f4435"/>
+  <text x="608" y="323" fill="#ca5639" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · CLOCK</text>
+  <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Fifty hours, ten after dark</tspan></text>
+</svg>

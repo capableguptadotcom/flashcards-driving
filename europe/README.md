@@ -2,6 +2,8 @@
 
 This directory is a self-contained Europe driving experience. It deliberately does not import California card data, application logic, progress, or theme state.
 
+Its 108 visual specifications are stored in `visuals.js`, and its generated SVGs remain under `assets/card-visuals/`. The shared build script validates and renders them without merging either curriculum at runtime.
+
 ## Curriculum boundary
 
 `cards.js` exports one `window.EUROPE_DRIVING` module. The current module is an EU travel baseline, not a fictional Europe-wide road code:

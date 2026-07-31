@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="speed-06" role="img" aria-labelledby="title-speed-06">
+  <title id="title-speed-06">The safest alcohol target — Zero alcohol is the portable target</title>
+  <rect width="640" height="295" fill="#fffaf0"/>
+        <path d="M94 58H236L214 184Q208 220 165 220T116 184Z" fill="#c9c4ad" stroke="#3f4435" stroke-width="8"/><path d="M165 220V264M114 264H216" stroke="#3f4435" stroke-width="10"/>
+        <circle cx="165" cy="145" r="102" fill="none" stroke="#ca5639" stroke-width="15"/><path d="M92 72L238 218" stroke="#ca5639" stroke-width="15"/>
+        <path d="M300 295L384 104H434L520 295Z" fill="#40423d"/><path d="M410 120V278" stroke="#fff0a2" stroke-width="7" stroke-dasharray="20 18"/>
+        <rect x="316" y="41" width="270" height="66" rx="12" fill="#3f4435"/>
+        <text x="451" y="85" fill="#fffaf0" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" letter-spacing="1">0</text>
+  <rect y="295" width="640" height="65" fill="#3f4435"/>
+  <text x="608" y="323" fill="#ca5639" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · ALCOHOL</text>
+  <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Zero alcohol is the portable target</tspan></text>
+</svg>

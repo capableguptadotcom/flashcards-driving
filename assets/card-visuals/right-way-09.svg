@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="right-way-09" role="img" aria-labelledby="title-right-way-09">
+  <title id="title-right-way-09">The mountain standoff — Downhill vehicle backs to a turnout</title>
+  <rect width="640" height="295" fill="#f0c88a"/><path d="M0 220L144 50L255 205L390 31L544 214L640 110V295H0Z" fill="#4c7680"/>
+        <path d="M146 50L180 101L128 90ZM390 31L436 94L370 80Z" fill="#fffaf0"/>
+        <path d="M40 295Q155 190 270 246T600 166" fill="none" stroke="#41433f" stroke-width="52"/>
+        <path d="M40 295Q155 190 270 246T600 166" fill="none" stroke="#fff0a2" stroke-width="5" stroke-dasharray="22 18"/>
+        <rect x="55" y="53" width="238" height="68" rx="12" fill="#243d42"/>
+        <text x="174" y="98" fill="#fffaf0" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">UPHILL</text>
+  <rect y="295" width="640" height="65" fill="#243d42"/>
+  <text x="608" y="323" fill="#c54535" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · MOUNTAIN</text>
+  <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Downhill vehicle backs to a turnout</tspan></text>
+</svg>

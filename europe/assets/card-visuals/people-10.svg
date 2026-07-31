@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="people-10" role="img" aria-labelledby="title-people-10">
+  <title id="title-people-10">The pedestrian in rain — Rain and darkness demand a wider scan</title>
+  <rect width="640" height="295" fill="#98c5b8"/>
+    <circle cx="500" cy="62" r="34" fill="#f5d56b"/>
+    <path d="M0 154L110 80L214 166L310 88L420 170L530 75L640 158V295H0Z" fill="#d7ca91"/>
+    <path d="M230 295L294 132H346L414 295Z" fill="#3d4240"/>
+    <path d="M319 144V280" stroke="#fff2a8" stroke-width="7" stroke-dasharray="20 19"/>
+        <g stroke="#eaf5f3" stroke-width="5" opacity=".8"><path d="M50 35L30 80M105 20L80 76M170 38L145 95M465 25L440 80M548 36L520 96M612 18L584 76"/></g>
+        <path d="M0 190H640" stroke="#eef7f1" stroke-width="18" opacity=".25"/>
+        <rect x="55" y="48" width="245" height="70" rx="12" fill="#234b3f" opacity=".94"/>
+        <text x="178" y="94" fill="#fff9ea" font-family="Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" letter-spacing="1">PEDESTRIAN</text><g transform="translate(350 231) rotate(0) scale(1.05)">
+    <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#bd4e3a" stroke="#172a27" stroke-width="3"/>
+    <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
+    <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
+  </g>
+  <rect y="295" width="640" height="65" fill="#234b3f"/>
+  <text x="608" y="323" fill="#bd4e3a" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · WEATHER</text>
+  <text x="32" y="320" fill="#fff9ea" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Rain and darkness demand a wider scan</tspan></text>
+</svg>

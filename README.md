@@ -7,6 +7,8 @@ Two independent, scenario-based driving study experiences share an interaction p
 
 Each turns rules into road moments: picture the scene, predict the move, reveal the reason, and keep a short memory hook.
 
+Every one of the 216 flashcards has its own purpose-built road diagram. The compact illustration appears in the card library and at full size during study, with descriptive alternative text for screen readers.
+
 ## California experience
 
 - 108 original road-story cards across nine complete decks
@@ -49,12 +51,14 @@ Then open `http://localhost:4173`.
 Run the validation suite with:
 
 ```powershell
-npm test
+npm run check
 ```
+
+Visual specifications live beside each curriculum in `visuals.js`. After changing a specification, regenerate the SVG assets with `npm run generate:visuals`; `npm run check` fails if any card is missing a visual or if an asset is stale.
 
 ## Content model
 
-California deck metadata and flashcards live in `cards.js`. Europe content lives only in `europe/cards.js` and exports a separate `EUROPE_DRIVING` module. Europe cards add scope, jurisdiction, official source and verification metadata; see `europe/README.md` before adding a country pack.
+California deck metadata and flashcards live in `cards.js`, with visual specifications in `visuals.js` and generated artwork in `assets/card-visuals/`. Europe content, visual specifications, and artwork live only under `europe/`. Europe cards add scope, jurisdiction, official source and verification metadata; see `europe/README.md` before adding a country pack.
 
 ## Deployment
 

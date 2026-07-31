@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="speed-07" role="img" aria-labelledby="title-speed-07">
+  <title id="title-speed-07">Legal is not unimpaired — Impairment begins below some limits</title>
+  <rect width="640" height="295" fill="#fff8e9"/>
+        <path d="M94 58H236L214 184Q208 220 165 220T116 184Z" fill="#a9c8ca" stroke="#163b32" stroke-width="8"/><path d="M165 220V264M114 264H216" stroke="#163b32" stroke-width="10"/>
+        <circle cx="165" cy="145" r="102" fill="none" stroke="#d85c3d" stroke-width="15"/><path d="M92 72L238 218" stroke="#d85c3d" stroke-width="15"/>
+        <path d="M300 295L384 104H434L520 295Z" fill="#3c4341"/><path d="M410 120V278" stroke="#fff0a2" stroke-width="7" stroke-dasharray="20 18"/>
+        <rect x="316" y="41" width="270" height="66" rx="12" fill="#163b32"/>
+        <text x="451" y="85" fill="#fff8e9" font-family="Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" letter-spacing="1">LEGAL ≠ SAFE</text>
+  <rect y="295" width="640" height="65" fill="#163b32"/>
+  <text x="608" y="323" fill="#d85c3d" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · ALCOHOL</text>
+  <text x="32" y="320" fill="#fff8e9" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Impairment begins below some limits</tspan></text>
+</svg>

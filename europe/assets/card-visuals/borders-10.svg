@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="borders-10" role="img" aria-labelledby="title-borders-10">
+  <title id="title-borders-10">The number plate proof — Plate proves cover, papers ease checks</title>
+  <rect width="640" height="295" fill="#a9c8ca"/><rect x="72" y="38" width="316" height="224" rx="14" fill="#fff8e9" stroke="#163b32" stroke-width="6"/>
+        <path d="M110 88H322M110 126H284M110 164H322M110 202H248" stroke="#2f725d" stroke-width="11" stroke-linecap="round"/>
+        <path d="M470 53L556 86V151Q556 221 470 258Q384 221 384 151V86Z" fill="#163b32" stroke="#d85c3d" stroke-width="10"/>
+        <text x="470" y="168" fill="#fff8e9" font-family="Arial, sans-serif" font-size="21" font-weight="800" text-anchor="middle" letter-spacing="1">PLATE + PAPERS</text>
+  <rect y="295" width="640" height="65" fill="#163b32"/>
+  <text x="608" y="323" fill="#d85c3d" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · INSURANCE</text>
+  <text x="32" y="320" fill="#fff8e9" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Plate proves cover, papers ease checks</tspan></text>
+</svg>

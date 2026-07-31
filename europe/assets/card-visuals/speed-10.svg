@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="speed-10" role="img" aria-labelledby="title-speed-10">
+  <title id="title-speed-10">Program the route — Reprogram navigation only while stopped</title>
+  <rect width="640" height="295" fill="#a9c8ca"/><path d="M0 226Q320 116 640 226V295H0Z" fill="#163b32"/>
+        <circle cx="170" cy="232" r="92" fill="none" stroke="#fff8e9" stroke-width="17"/><circle cx="170" cy="232" r="23" fill="#d85c3d"/>
+        <circle cx="430" cy="182" r="74" fill="#3c4341" stroke="#fff8e9" stroke-width="8"/><path d="M430 182L468 137" stroke="#d85c3d" stroke-width="10"/>
+        <rect x="253" y="45" width="300" height="78" rx="13" fill="#fff8e9" stroke="#163b32" stroke-width="5"/>
+        <text x="403" y="96" fill="#163b32" font-family="Arial, sans-serif" font-size="38" font-weight="800" text-anchor="middle" letter-spacing="1">ROUTE</text>
+  <rect y="295" width="640" height="65" fill="#163b32"/>
+  <text x="608" y="323" fill="#d85c3d" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · DASHBOARD</text>
+  <text x="32" y="320" fill="#fff8e9" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Reprogram navigation only while stopped</tspan></text>
+</svg>

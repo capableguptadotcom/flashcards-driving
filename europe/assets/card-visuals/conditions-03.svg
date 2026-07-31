@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="conditions-03" role="img" aria-labelledby="title-conditions-03">
+  <title id="title-conditions-03">A closed mountain pass — Verify the seasonal mountain route</title>
+  <rect width="640" height="295" fill="#c8b6d8"/><path d="M0 220L144 50L255 205L390 31L544 214L640 110V295H0Z" fill="#74608d"/>
+        <path d="M146 50L180 101L128 90ZM390 31L436 94L370 80Z" fill="#fff9ef"/>
+        <path d="M40 295Q155 190 270 246T600 166" fill="none" stroke="#3f4145" stroke-width="52"/>
+        <path d="M40 295Q155 190 270 246T600 166" fill="none" stroke="#fff0a2" stroke-width="5" stroke-dasharray="22 18"/>
+        <rect x="55" y="53" width="238" height="68" rx="12" fill="#43385f"/>
+        <text x="174" y="98" fill="#fff9ef" font-family="Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" letter-spacing="1">PASS CLOSED</text>
+  <rect y="295" width="640" height="65" fill="#43385f"/>
+  <text x="608" y="323" fill="#d35c43" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · MOUNTAIN</text>
+  <text x="32" y="320" fill="#fff9ef" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Verify the seasonal mountain route</tspan></text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="motorways-01" role="img" aria-labelledby="title-motorways-01">
+  <title id="title-motorways-01">Toll, vignette or free — Choose route with its payment system</title>
+  <rect width="640" height="295" fill="#fff9eb"/><path d="M0 60L155 20L300 66L468 20L640 72V260L480 282L310 246L156 282L0 246Z" fill="#a9c2df" opacity=".65"/>
+        <path d="M78 210C148 70 254 255 322 116S486 230 570 70" fill="none" stroke="#d75b36" stroke-width="14" stroke-linecap="round" stroke-dasharray="2 24"/>
+        <circle cx="78" cy="210" r="16" fill="#273f67"/><circle cx="570" cy="70" r="20" fill="#273f67"/>
+        <rect x="190" y="104" width="260" height="74" rx="12" fill="#273f67"/>
+        <text x="320" y="153" fill="#fff9eb" font-family="Arial, sans-serif" font-size="21" font-weight="800" text-anchor="middle" letter-spacing="1">TOLL / TAG / FREE</text>
+  <rect y="295" width="640" height="65" fill="#273f67"/>
+  <text x="608" y="323" fill="#d75b36" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · MAP</text>
+  <text x="32" y="320" fill="#fff9eb" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Choose route with its payment system</tspan></text>
+</svg>

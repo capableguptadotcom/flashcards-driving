@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="conditions-09" role="img" aria-labelledby="title-conditions-09">
+  <title id="title-conditions-09">The café cannot fix sleep — Coffee cannot replace actual rest</title>
+  <rect width="640" height="295" fill="#43385f"/>
+        <circle cx="320" cy="144" r="106" fill="#fff9ef" stroke="#d35c43" stroke-width="12"/>
+        <g stroke="#74608d" stroke-width="6"><path d="M320 52V72M320 216V236M228 144H248M392 144H412"/></g>
+        <path d="M320 144L320 84M320 144L368 168" stroke="#43385f" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="320" cy="144" r="10" fill="#d35c43"/>
+        <rect x="228" y="118" width="184" height="52" rx="10" fill="#43385f" opacity=".92"/>
+        <text x="320" y="155" fill="#fff9ef" font-family="Arial, sans-serif" font-size="38" font-weight="800" text-anchor="middle" letter-spacing="1">SLEEP</text>
+  <rect y="295" width="640" height="65" fill="#43385f"/>
+  <text x="608" y="323" fill="#d35c43" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · CLOCK</text>
+  <text x="32" y="320" fill="#fff9ef" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Coffee cannot replace actual rest</tspan></text>
+</svg>

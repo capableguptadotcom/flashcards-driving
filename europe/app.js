@@ -5,6 +5,7 @@
   const cards = curriculum.cards;
   const decks = curriculum.decks;
   const sources = curriculum.sources;
+  const visuals = window.EUROPE_VISUALS;
   const deckById = Object.fromEntries(decks.map((deck) => [deck.id, deck]));
   const STORAGE_KEY = `continental-roadbook-${curriculum.id}-progress-v1`;
   const THEME_KEY = "continental-roadbook-theme";
@@ -87,6 +88,21 @@
     return getCardStatus(card.id)?.rating === 3;
   }
 
+  function escapeAttribute(value) {
+    return value.replace(/[&"<>]/g, (character) => ({
+      "&": "&amp;",
+      '"': "&quot;",
+      "<": "&lt;",
+      ">": "&gt;"
+    })[character]);
+  }
+
+  function cardVisual(card, className = "study-visual") {
+    const visual = visuals[card.id];
+    const alt = escapeAttribute(`Road-rule illustration for ${card.title}: ${visual.cue}`);
+    return `<img class="${className}" src="assets/card-visuals/${card.id}.svg" alt="${alt}" width="640" height="360" />`;
+  }
+
   function cardScope(card) {
     return ["EU", "Destination country"].includes(card.jurisdiction)
       ? card.scopeLabel
@@ -155,6 +171,7 @@
       return `
         <button class="library-card ${isLearned(card) ? "learned" : ""}" type="button" data-card="${card.id}">
           <span class="card-index">${cardNumber}</span>
+          ${cardVisual(card, "library-thumb")}
           <span><span class="card-deck">${deck.short} · ${cardScope(card)}</span><strong>${card.title}</strong></span>
           <span class="card-arrow" aria-hidden="true">→</span>
         </button>
@@ -228,11 +245,13 @@
       elements.stage.innerHTML = `
         <article class="study-card" style="--card-color:${deck.color}">
           <div class="study-card-top"><span>${deck.name}</span><span>${cardScope(card)}</span></div>
+          ${cardVisual(card)}
           <h2>${card.title}</h2>
           <p class="scene-copy">${card.scene}</p>
           <p class="prediction-cue">Pause. What would you do?</p>
         </article>
       `;
+      elements.stage.scrollTop = 0;
       elements.controls.innerHTML = `
         <button class="primary-button reveal-button" id="reveal-card" type="button">Reveal the road rule <span aria-hidden="true">→</span></button>
       `;
@@ -243,6 +262,7 @@
     elements.stage.innerHTML = `
       <article class="study-card reveal-card" style="--card-color:${deck.color}">
         <div class="study-card-top"><span>${deck.name}</span><span>${cardScope(card)}</span></div>
+        ${cardVisual(card)}
         <h2>${card.title}</h2>
         <div class="answer-callout">${card.answer}</div>
         <div class="reason-block">
@@ -252,6 +272,7 @@
         <a class="source-chip" href="${source.url}" target="_blank" rel="noreferrer">${source.short} · verified ${curriculum.verified} ↗</a>
       </article>
     `;
+    elements.stage.scrollTop = 0;
     elements.controls.innerHTML = `
       <button class="rating-button" style="--rating-color:#c64b38" type="button" data-rating="1"><small>1</small>Revisit</button>
       <button class="rating-button" style="--rating-color:#bc8422" type="button" data-rating="2"><small>2</small>Almost</button>

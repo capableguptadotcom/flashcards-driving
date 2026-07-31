@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="signals-03" role="img" aria-labelledby="title-signals-03">
+  <title id="title-signals-03">The blinking red beacon — Treat the beacon like a stop sign</title>
+  <rect width="640" height="295" fill="#98c5b8"/><path d="M0 230H640V295H0Z" fill="#3d4240"/>
+        <path d="M0 262H640M320 230V295" stroke="#fff0a2" stroke-width="7" stroke-dasharray="25 20"/>
+        <path d="M190 242V48H300" fill="none" stroke="#234b3f" stroke-width="14"/>
+        <rect x="268" y="28" width="78" height="162" rx="16" fill="#172522"/>
+        <circle cx="307" cy="66" r="23" fill="#e44939" opacity=".25"/>
+        <circle cx="307" cy="109" r="23" fill="#dfab37" opacity=".25"/>
+        <circle cx="307" cy="152" r="23" fill="#51a76d" opacity=".25"/>
+        <circle cx="307" cy="66" r="23" fill="#e44939"/>
+        <rect x="386" y="78" width="190" height="82" rx="12" fill="#fff9ea" stroke="#234b3f" stroke-width="5"/>
+        <text x="481" y="130" fill="#234b3f" font-family="Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" letter-spacing="1">FLASH RED</text>
+  <rect y="295" width="640" height="65" fill="#234b3f"/>
+  <text x="608" y="323" fill="#bd4e3a" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · SIGNAL</text>
+  <text x="32" y="320" fill="#fff9ea" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Treat the beacon like a stop sign</tspan></text>
+</svg>

@@ -28,11 +28,12 @@ jobs:
         with:
           node-version: 22
       - name: Validate flashcards
-        run: npm test
+        run: npm run check
       - name: Prepare static site
         run: |
           mkdir _site
-          cp index.html styles.css app.js cards.js CONTENT_LICENSE.md _site/
+          cp index.html styles.css app.js cards.js visuals.js CONTENT_LICENSE.md _site/
+          cp -R assets _site/assets
           cp -R europe _site/europe
       - name: Configure Pages
         uses: actions/configure-pages@v5
