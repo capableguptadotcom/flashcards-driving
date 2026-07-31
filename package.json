@@ -1,0 +1,10 @@
+{
+  "name": "golden-state-roadtrip",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scenario-based California DMV flashcards",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check app.js && node --check cards.js && node --test"
+  }
+}
