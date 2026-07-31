@@ -50,6 +50,9 @@ test("the page has source, accessibility, and study controls", () => {
   const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
   assert.match(html, /class="skip-link"/);
   assert.match(html, /<dialog class="study-dialog"/);
+  assert.match(html, /role="navigation" aria-label="Choose driving guide"/);
+  assert.match(html, /href="\.\/" aria-label="California" aria-current="page"/);
+  assert.match(html, /href="europe\/" aria-label="Europe"/);
   assert.match(html, /California Department of Motor Vehicles/);
   assert.match(html, /CC BY-NC 4\.0/);
   assert.match(html, /Not affiliated with or endorsed by the DMV/);

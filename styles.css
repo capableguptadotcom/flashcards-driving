@@ -185,6 +185,50 @@ nav a:focus-visible {
   color: var(--orange);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 10px;
+}
+
+.guide-switcher {
+  display: flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper-deep);
+}
+
+.guide-switcher a {
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.guide-switcher a:hover,
+.guide-switcher a:focus-visible {
+  color: var(--orange);
+}
+
+.guide-switcher a[aria-current="page"] {
+  color: var(--on-pine);
+  background: var(--pine);
+}
+
+.guide-name-short {
+  display: none;
+}
+
+.header-actions .icon-button {
+  flex: 0 0 auto;
+  margin-left: 0;
+}
+
 .icon-button {
   display: grid;
   place-items: center;
@@ -1401,6 +1445,11 @@ footer p:last-child {
     padding: 18px 0;
   }
 
+  .guide-switcher a {
+    padding: 6px 7px;
+    font-size: 10px;
+  }
+
   .hero {
     min-height: auto;
     gap: 50px;
@@ -1536,6 +1585,30 @@ footer p:last-child {
 
   .keyboard-hint {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .header-actions {
+    gap: 6px;
+  }
+
+  .guide-switcher a {
+    padding: 5px 6px;
+    font-size: 9px;
+  }
+
+  .guide-name-full {
+    display: none;
+  }
+
+  .guide-name-short {
+    display: inline;
+  }
+
+  .header-actions .icon-button {
+    width: 34px;
+    height: 34px;
   }
 }
 

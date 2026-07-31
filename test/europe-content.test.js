@@ -65,7 +65,10 @@ test("Europe page and browser state stay separate from California", () => {
   assert.match(html, /class="skip-link"/);
   assert.match(html, /<dialog class="study-dialog"/);
   assert.match(html, /Europe is not one driving jurisdiction/);
-  assert.doesNotMatch(html, /California|DMV/);
+  assert.match(html, /role="navigation" aria-label="Choose driving guide"/);
+  assert.match(html, /href="\.\.\/" aria-label="California"/);
+  assert.match(html, /href="\.\/" aria-label="Europe" aria-current="page"/);
+  assert.doesNotMatch(html, /DMV|Golden State/);
   assert.match(app, /window\.EUROPE_DRIVING/);
   assert.match(app, /continental-roadbook-/);
   assert.doesNotMatch(app, /ROAD_CARDS|golden-state-roadtrip/);
