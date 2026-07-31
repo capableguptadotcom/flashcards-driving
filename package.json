@@ -1,10 +1,10 @@
 {
-  "name": "golden-state-roadtrip",
+  "name": "road-rules-flashcards",
   "version": "1.0.0",
   "private": true,
-  "description": "Scenario-based California DMV flashcards",
+  "description": "Separate scenario-based California and Europe driving flashcards",
   "scripts": {
     "test": "node --test",
-    "check": "node --check app.js && node --check cards.js && node --test"
+    "check": "node --check app.js && node --check cards.js && node --check europe/app.js && node --check europe/cards.js && node --test"
   }
 }

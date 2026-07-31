@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Prepare to drive across Europe with memorable scenarios, official sources, and clear country-check warnings."
+    />
+    <meta name="theme-color" content="#edf2ec" />
+    <title>Continental Roadbook — Europe driving flashcards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260731" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Continental Roadbook home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>
+          <strong>Continental</strong>
+          <small>Roadbook</small>
+        </span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#decks">Decks</a>
+        <a href="#library">Library</a>
+        <a href="#field-notes">Field notes</a>
+      </nav>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <span aria-hidden="true">◐</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="route-line" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Europe by road · official sources checked 2026</p>
+          <h1>One continent.<br /><em>Many road rules.</em></h1>
+          <p class="hero-intro">
+            Short road stories for the habits Europe shares and the details every destination changes.
+            Predict the move. Reveal the reason. Know when to check locally.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" id="start-session" type="button">
+              Start a 10-card crossing <span aria-hidden="true">→</span>
+            </button>
+            <button class="text-button" id="review-due" type="button">Review cards to revisit</button>
+          </div>
+          <div class="hero-proof" aria-label="Site summary">
+            <div><strong id="total-count">100+</strong><span>road stories</span></div>
+            <div><strong>9</strong><span>complete decks</span></div>
+            <div><strong>2</strong><span>rule scopes</span></div>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Example flashcard">
+          <div class="card-stamp">EUROPE · QUICK READ</div>
+          <div class="road-scene road-scene--alpine" aria-hidden="true">
+            <div class="sun"></div>
+            <div class="mountain mountain--back"></div>
+            <div class="mountain mountain--front"></div>
+            <div class="road"><span></span></div>
+            <div class="sign sign--speed">80</div>
+          </div>
+          <p class="scene-label">THE BORDER RESET</p>
+          <h2>You cross a border. Does yesterday’s speed limit follow?</h2>
+          <div class="mini-answer">
+            <span>Read the destination</span>
+            <strong>No — limits and duties can change</strong>
+          </div>
+          <p class="margin-note">Europe shares a road-sign language, not one rulebook.</p>
+        </div>
+      </section>
+
+      <section class="progress-strip" aria-label="Your study progress">
+        <div>
+          <span class="progress-label">YOUR ROUTE SO FAR</span>
+          <div class="progress-track" aria-hidden="true"><span id="overall-progress-bar"></span></div>
+        </div>
+        <strong id="overall-progress-text">0 learned · start anywhere</strong>
+        <button class="quiet-button" id="reset-progress" type="button">Reset progress</button>
+      </section>
+
+      <section class="section decks-section" id="decks">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Choose your stretch of road</p>
+            <h2>Nine decks. One prepared driver.</h2>
+          </div>
+          <p>Start with the unfamiliar, or follow the route from trip planning to roadside emergencies.</p>
+        </div>
+        <div class="deck-grid" id="deck-grid"></div>
+      </section>
+
+      <section class="section method-section">
+        <div class="method-intro">
+          <p class="eyebrow">Built for recall</p>
+          <h2>Every card has a job.</h2>
+          <p>A rule sticks when it is attached to a scene, a reason, and one clear cue.</p>
+        </div>
+        <ol class="method-list">
+          <li><span>01</span><div><strong>Picture the moment</strong><p>A tiny road story gives the rule somewhere to live.</p></div></li>
+          <li><span>02</span><div><strong>Predict your move</strong><p>Pause before revealing. Retrieval builds memory.</p></div></li>
+          <li><span>03</span><div><strong>Keep the pocket rule</strong><p>A compact phrase makes the distinction portable.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="section library-section" id="library">
+        <div class="section-heading library-heading">
+          <div>
+            <p class="eyebrow">The glovebox library</p>
+            <h2>Find any rule fast.</h2>
+          </div>
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <span class="sr-only">Search cards</span>
+            <input id="search-input" type="search" placeholder="Search “roundabout”, “tunnel”, “alcohol”…" />
+          </label>
+        </div>
+        <div class="filter-row" id="filter-row" aria-label="Filter flashcards"></div>
+        <p class="results-count" id="results-count" aria-live="polite"></p>
+        <div class="card-library" id="card-library"></div>
+        <button class="secondary-button load-more" id="load-more" type="button">Show more cards</button>
+      </section>
+
+      <section class="section field-notes" id="field-notes">
+        <div class="field-note-card field-note-card--exam">
+          <p class="eyebrow">Country-check radar</p>
+          <h2>Europe is not one driving jurisdiction.</h2>
+          <p>
+            A shared sign system and EU safety rules help, but speed limits, alcohol limits, equipment,
+            winter rules, tolls, and low-emission zones can change at every border.
+          </p>
+          <p class="exam-score"><strong>CHECK</strong><span>the official destination page before every border crossing</span></p>
+          <a href="https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/index_en.htm" target="_blank" rel="noreferrer">Open the EU country rules map <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="field-note-card field-note-card--numbers">
+          <p class="eyebrow">Number clusters</p>
+          <div class="number-grid">
+            <div><strong>112</strong><span>EU emergency number</span></div>
+            <div><strong>2 sec</strong><span>moving gap in covered tunnels</span></div>
+            <div><strong>5m</strong><span>stopped gap in covered tunnels</span></div>
+            <div><strong>0</strong><span>safest drinks before driving</span></div>
+          </div>
+          <p class="number-hook">Keep the common anchors. Recheck the local limits.</p>
+        </div>
+      </section>
+
+      <section class="section sources-section" id="sources">
+        <p class="eyebrow">Source lane</p>
+        <h2>Study with receipts.</h2>
+        <p>
+          Every story is original and checked against official EU or national authority material. The 2016 travel
+          handbook helped shape the topic map, but it is not used as current legal authority. Each card names its scope and source.
+        </p>
+        <div class="source-links">
+          <a href="https://europa.eu/youreurope/citizens/travel/driving-abroad/road-rules-and-safety/index_en.htm" target="_blank" rel="noreferrer">EU road rules by country <span aria-hidden="true">↗</span></a>
+          <a href="https://road-safety.transport.ec.europa.eu/index_en" target="_blank" rel="noreferrer">European Commission road safety <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="attribution">Independent educational project. Not a substitute for destination-specific law, rental terms, road signs, or police directions. Not affiliated with or endorsed by the European Union.</p>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand brand--footer" href="#top">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span><strong>Continental</strong><small>Roadbook</small></span>
+      </a>
+      <p>Learn what travels. Check what changes. Arrive safely.</p>
+      <p>Made for Europe-bound drivers · <span id="current-year"></span></p>
+    </footer>
+
+    <dialog class="study-dialog" id="study-dialog" aria-labelledby="study-deck-label" aria-describedby="study-position">
+      <div class="study-shell">
+        <header class="study-header">
+          <div>
+            <p class="study-kicker" id="study-deck-label">Mixed route</p>
+            <strong id="study-position">Card 1 of 10</strong>
+          </div>
+          <div class="study-progress" aria-hidden="true"><span id="study-progress-bar"></span></div>
+          <button class="icon-button close-study" id="close-study" type="button" aria-label="Close study session">×</button>
+        </header>
+
+        <div class="study-stage" id="study-stage" aria-live="polite"></div>
+        <div class="study-controls" id="study-controls"></div>
+        <p class="keyboard-hint">Space: reveal · 1: revisit · 2: almost · 3: got it</p>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="cards.js?v=20260731"></script>
+    <script src="app.js?v=20260731"></script>
+  </body>
+</html>

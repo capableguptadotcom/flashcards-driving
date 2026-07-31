@@ -8,4 +8,6 @@ This project adapts factual material from:
 
 Official source: https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/
 
-The project is independent and is not affiliated with or endorsed by the California Department of Motor Vehicles. Rules can change; verify them against the current official handbook before relying on this study aid.
+The Europe curriculum uses original educational wording based on public factual material from official European Union and national-authority sources. Each Europe card links to the authority used for that claim; the source audit is at `research/europe-official-source-audit.md`. The supplied 2016 travel handbook informed the topic map only and is not treated as current legal authority.
+
+The project is independent and is not affiliated with or endorsed by the California Department of Motor Vehicles, the European Union, or any national road authority. Rules can change; verify them against the current official source for the place where you will drive before relying on this study aid.
