@@ -74,3 +74,34 @@ test("both pages load their own visual module before their application", () => {
   assert.match(fs.readFileSync(path.join(root, "app.js"), "utf8"), /window\.ROAD_VISUALS/);
   assert.match(fs.readFileSync(path.join(root, "europe", "app.js"), "utf8"), /window\.EUROPE_VISUALS/);
 });
+
+test("regulated signs, markings, parking layouts, and country-check scenes retain their visual meaning", () => {
+  const california = path.join(root, "assets", "card-visuals");
+  const europe = path.join(root, "europe", "assets", "card-visuals");
+  const read = (directory, cardId) => fs.readFileSync(path.join(directory, cardId + ".svg"), "utf8");
+
+  assert.match(read(california, "signals-09"), /data-sign-standard="CA-MUTCD-R1-1"/);
+  assert.match(read(california, "signals-10"), /data-sign-standard="CA-MUTCD-S1-1"/);
+  assert.doesNotMatch(read(california, "signals-10"), />SCHOOL</);
+  assert.match(read(california, "speed-parking-02"), /data-road-layout="undivided-two-lane-highway"/);
+  assert.doesNotMatch(read(california, "speed-parking-02"), /CA-MUTCD-R2-1/);
+  assert.match(read(california, "lanes-02"), /data-road-marking="double-double-yellow-barrier"/);
+  assert.match(read(california, "lanes-03"), /data-road-marking="double-solid-white-hov-barrier"/);
+  assert.match(read(california, "lanes-04"), /data-road-marking="yield-line"/);
+  assert.match(read(california, "lanes-07"), /data-road-marking="bike-lane"/);
+  assert.match(read(california, "lanes-09"), /data-road-marking="one-way-left-on-red"/);
+  assert.match(read(california, "speed-parking-07"), /data-road-marking="curb-colour-code"/);
+  assert.match(read(california, "speed-parking-08"), /data-road-marking="parallel-curb"/);
+  assert.match(read(california, "speed-parking-09"), /data-parking-orientation="downhill-into-curb"/);
+  assert.match(read(california, "speed-parking-09"), /data-parking-orientation="uphill-away-from-curb"/);
+  assert.match(read(california, "speed-parking-09"), /data-parking-orientation="no-curb-right-edge"/);
+  assert.match(read(california, "speed-parking-10"), /data-parking-buffer="fire-hydrant-15-feet"/);
+  assert.match(read(california, "right-way-04"), /data-traffic-flow="counterclockwise"/);
+
+  assert.match(read(europe, "signals-01"), /data-sign-standard="UNECE-VIENNA-CLASSES"/);
+  assert.match(read(europe, "borders-03"), /data-sign-standard="COUNTRY-SPECIFIC-LIMITS"/);
+  assert.match(read(europe, "signals-05"), /data-sign-standard="COUNTRY-SPECIFIC-PARKING-PLATE"/);
+  assert.match(read(europe, "junctions-10"), /data-road-marking="yellow-box"/);
+  assert.match(read(europe, "junctions-11"), /data-road-marking="merge"/);
+  assert.match(read(europe, "motorways-10"), /data-road-marking="emergency-corridor"/);
+});

@@ -96,7 +96,170 @@ function signalLamp(symbol) {
         ${isArrow ? `<path d="${arrow}" fill="${activeColor}"/>` : `<circle cx="307" cy="${activeY}" r="23" fill="${activeColor}"/>`}`;
 }
 
-function sceneLayer(kind, colors, symbol) {
+function marker(text, x, y, fill, size = 18) {
+  return '<text x="' + x + '" y="' + y + '" fill="' + fill + '" font-family="Arial, sans-serif" font-size="' + size + '" font-weight="800" text-anchor="middle">' + escapeXml(text) + '</text>';
+}
+
+function arrow(path, color = "#fff7cb") {
+  return '<path d="' + path + '" fill="none" stroke="' + color + '" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>';
+}
+
+function caStopSign(x, y) {
+  return '<g data-sign-standard="CA-MUTCD-R1-1" transform="translate(' + x + ' ' + y + ')"><path d="M-42 -58H42L58 -42V42L42 58H-42L-58 42V-42Z" fill="#b92728" stroke="#fff" stroke-width="7"/>' + marker("STOP", 0, 11, "#fff", 20) + '</g>';
+}
+
+function caSchoolSign(x, y) {
+  return '<g data-sign-standard="CA-MUTCD-S1-1" transform="translate(' + x + ' ' + y + ')"><path d="M0 -62L53 -25V57H-53V-25Z" fill="#d6ff35" stroke="#1f2926" stroke-width="8"/><circle cx="-15" cy="-18" r="7" fill="#1f2926"/><circle cx="13" cy="-12" r="6" fill="#1f2926"/><path d="M-15 -10V21M-15 0L-30 12M-15 0L0 11M-15 21L-28 42M-15 21L-1 43M13 -5V23M13 4L2 15M13 5L27 15M13 23L2 42M13 23L29 42" fill="none" stroke="#1f2926" stroke-width="7" stroke-linecap="round"/></g>';
+}
+
+function caSpeedSign(x, y, speed) {
+  return '<g data-sign-standard="CA-MUTCD-R2-1" transform="translate(' + x + ' ' + y + ')"><rect x="-48" y="-65" width="96" height="130" rx="2" fill="#fff" stroke="#1f2926" stroke-width="6"/>' + marker("SPEED", 0, -30, "#1f2926", 15) + marker("LIMIT", 0, -10, "#1f2926", 15) + marker(speed, 0, 40, "#1f2926", 46) + '</g>';
+}
+
+function euSignPalette(x, y) {
+  return '<g data-sign-standard="UNECE-VIENNA-CLASSES" transform="translate(' + x + ' ' + y + ')"><path d="M0 -70L59 42H-59Z" fill="#fff" stroke="#d83731" stroke-width="10"/><circle cx="0" cy="5" r="37" fill="#fff" stroke="#d83731" stroke-width="10"/><circle cx="0" cy="83" r="37" fill="#2f72b8"/><path d="M-13 83H17M7 73L17 83L7 93" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></g>';
+}
+
+function signScene(key, colors, symbol) {
+  if (key === "CA:signals-09") return roadPerspective(colors) + '<path d="M145 224V144" stroke="#1f2926" stroke-width="11"/>' + caStopSign(145, 82);
+  if (key === "CA:signals-10") return roadPerspective(colors) + '<path d="M145 224V145" stroke="#1f2926" stroke-width="11"/>' + caSchoolSign(145, 82) + '<path d="M335 236H560" stroke="#fff" stroke-width="12" stroke-dasharray="28 16"/>' + person(465, 202, colors.dark, .62) + person(515, 205, colors.accent, .5);
+  if (key === "CA:speed-parking-02") return '<rect width="640" height="295" fill="' + colors.ground + '"/><rect data-road-layout="undivided-two-lane-highway" x="0" y="78" width="640" height="146" fill="' + colors.road + '"/><path d="M0 151H640" stroke="#f2ce47" stroke-width="8"/>' + car(170, 120, colors.accent, 0, .9) + car(480, 188, colors.light, 180, .9) + marker("UNPOSTED MAXIMUM: 55 mph", 320, 52, colors.dark, 19);
+  if (key === "EUROPE:signals-01") return roadPerspective(colors) + '<path d="M145 224V147" stroke="#1f2926" stroke-width="11"/>' + euSignPalette(145, 115) + marker("CHECK LOCAL GUIDE", 435, 86, colors.dark, 19);
+  if (key === "EUROPE:borders-03" || key === "EUROPE:speed-01") return roadPerspective(colors) + '<rect data-sign-standard="COUNTRY-SPECIFIC-LIMITS" x="70" y="42" width="224" height="128" rx="6" fill="#fff" stroke="' + colors.dark + '" stroke-width="6"/>' + marker("DESTINATION", 182, 76, colors.dark, 17) + marker("TOWN   ROAD   M-WAY", 182, 111, colors.dark, 14) + marker("CHECK OFFICIAL LIMITS", 182, 140, colors.accent, 14);
+  if (key === "EUROPE:signals-06") return roadPerspective(colors) + '<rect data-sign-standard="COUNTRY-SPECIFIC-ZONE" x="86" y="38" width="126" height="126" fill="#fff" stroke="' + colors.dark + '" stroke-width="6"/><circle cx="149" cy="101" r="40" fill="#fff" stroke="#d83731" stroke-width="8"/>' + marker("ZONE", 149, 107, colors.dark, 15) + marker("LOCAL END SIGN", 440, 92, colors.dark, 19);
+  return roadPerspective(colors) + '<path d="M145 224V92" stroke="' + colors.dark + '" stroke-width="11"/><rect x="80" y="37" width="130" height="92" rx="5" fill="#fff" stroke="' + colors.dark + '" stroke-width="6"/>' + marker(symbol, 145, 92, colors.dark, 17);
+}
+
+function signalHead(state) {
+  const lamps = '<circle cx="0" cy="-48" r="21" fill="#3f423f"/><circle cx="0" cy="0" r="21" fill="#3f423f"/><circle cx="0" cy="48" r="21" fill="#3f423f"/>';
+  if (state === "red") return lamps + '<circle cx="0" cy="-48" r="17" fill="#e34235"/>';
+  if (state === "yellow") return lamps + '<circle cx="0" cy="0" r="17" fill="#e5af39"/>';
+  if (state === "green") return lamps + '<circle cx="0" cy="48" r="17" fill="#50a96c"/>';
+  if (state === "flash-red") return lamps + '<circle cx="0" cy="-48" r="17" fill="#e34235"/><path d="M-34 -48H-50M34 -48H50" stroke="#e34235" stroke-width="6"/>';
+  if (state === "flash-yellow") return lamps + '<circle cx="0" cy="0" r="17" fill="#e5af39"/><path d="M-34 0H-50M34 0H50" stroke="#e5af39" stroke-width="6"/>';
+  return lamps;
+}
+
+function signalArrow(x, y, direction, fill) {
+  const d = direction === "left" ? "M20 -10H-7V-25L-35 0L-7 25V10H20Z" : "M-20 -10H7V-25L35 0L7 25V10H-20Z";
+  return '<g transform="translate(' + x + ' ' + y + ')"><path d="' + d + '" fill="' + fill + '"/></g>';
+}
+
+function signalScene(key, colors) {
+  let state = "red";
+  let move = "";
+  let arrowFace = "";
+  if (key === "CA:signals-03") state = "flash-red";
+  if (key === "CA:signals-04") state = "yellow";
+  if (key === "CA:signals-05") {
+    state = "flash-yellow";
+    arrowFace = signalArrow(0, 0, "left", "#e5af39");
+    move = arrow("M286 238V178Q286 148 240 148H178") + signalArrow(164, 148, "left", "#fff7cb");
+  }
+  if (key === "CA:signals-01") move = arrow("M286 238V182Q286 160 308 160H360") + signalArrow(374, 160, "right", "#fff7cb");
+  if (key === "CA:signals-02") {
+    arrowFace = signalArrow(0, -48, "right", "#e34235");
+    move = '<path d="M286 238V182Q286 160 308 160H350" fill="none" stroke="#e34235" stroke-width="9" stroke-linecap="round"/><path d="M338 135L372 185M372 135L338 185" stroke="#e34235" stroke-width="10"/>';
+  }
+  if (key === "EUROPE:junctions-07") {
+    state = "green";
+    arrowFace = signalArrow(0, 48, "right", "#50a96c");
+  }
+  if (key === "EUROPE:junctions-08") state = "flash-yellow";
+  if (key === "EUROPE:signals-04") {
+    state = "red";
+    arrowFace = signalArrow(0, -48, "right", "#e34235");
+  }
+  return '<rect width="640" height="295" fill="' + colors.sky + '"/><rect y="208" width="640" height="87" fill="' + colors.road + '"/><path data-road-marking="stop-line" d="M270 208H408" stroke="#fff" stroke-width="9"/><path d="M340 208V295" stroke="#fff0a2" stroke-width="7" stroke-dasharray="22 18"/><path d="M176 208V42H286" fill="none" stroke="' + colors.dark + '" stroke-width="14"/><rect x="250" y="23" width="78" height="167" rx="16" fill="#202624"/><g transform="translate(289 105)">' + signalHead(state) + arrowFace + '</g>' + car(340, 249, colors.accent, -90, .88) + move;
+}
+
+function laneScene(key, colors) {
+  const base = '<rect width="640" height="295" fill="' + colors.ground + '"/><rect x="70" width="500" height="295" fill="' + colors.road + '"/><path d="M78 0V295M562 0V295" stroke="#fff" stroke-width="7"/>';
+  if (key === "CA:lanes-01") return base + '<path data-road-marking="solid-yellow-your-side" d="M320 0V295" stroke="#f2ce47" stroke-width="9"/><path d="M335 0V295" stroke="#f2ce47" stroke-width="7" stroke-dasharray="28 18"/>' + car(205, 102, colors.accent, 90, .9) + car(206, 222, colors.light, 90, .9);
+  if (key === "CA:lanes-02") return base + '<path data-road-marking="double-double-yellow-barrier" d="M292 0V295M308 0V295M332 0V295M348 0V295" stroke="#f2ce47" stroke-width="7"/>' + car(190, 140, colors.accent, 90, .9) + car(452, 140, colors.mid, -90, .9);
+  if (key === "CA:lanes-03") return base + '<path data-road-marking="double-solid-white-hov-barrier" d="M310 0V295M330 0V295" stroke="#fff" stroke-width="7"/>' + car(205, 120, colors.accent, 90, .9) + car(435, 170, colors.light, 90, .9);
+  if (key === "CA:lanes-04") return base + '<path data-road-marking="yield-line" d="M245 235L275 190L305 235M315 235L345 190L375 235M385 235L415 190L445 235" fill="#fff" stroke="#fff" stroke-width="4"/>' + car(180, 132, colors.accent, 90, .9);
+  if (key === "CA:lanes-06") return base + '<path data-road-marking="two-way-left-turn-lane" d="M224 0V295M256 0V295M384 0V295M416 0V295" stroke="#f2ce47" stroke-width="6"/><path d="M320 264V72M320 72L294 100M320 72L346 100" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>' + car(320, 188, colors.accent, -90, .85);
+  if (key === "CA:lanes-07") return base + '<path data-road-marking="bike-lane" d="M250 0V295" stroke="#fff" stroke-width="7"/><path d="M250 222H398Q430 222 430 190V154" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/><circle cx="205" cy="167" r="18" fill="none" stroke="#fff" stroke-width="6"/><circle cx="205" cy="222" r="18" fill="none" stroke="#fff" stroke-width="6"/><path d="M205 185L230 205H194L177 222" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>' + car(365, 242, colors.accent, -90, .8);
+  if (key === "CA:lanes-10") return base + '<path data-road-marking="gore-area" d="M312 0L470 295H570V0Z" fill="#525856"/><path d="M326 15L460 276M365 15L500 276M404 15L540 276" stroke="#fff" stroke-width="11"/><path d="M300 0V295" stroke="#fff" stroke-width="8"/>' + car(190, 190, colors.accent, 90, .9);
+  if (key === "CA:lanes-11") return base + '<path data-road-marking="on-ramp-merge" d="M95 277Q205 180 300 215Q360 236 430 178" fill="none" stroke="#fff" stroke-width="8"/><path d="M420 0V295" stroke="#fff" stroke-width="7" stroke-dasharray="28 18"/>' + car(230, 220, colors.accent, -28, .85) + car(490, 115, colors.light, 90, .85);
+  if (key === "EUROPE:junctions-11") return base + '<path data-road-marking="merge" d="M175 0L295 160M465 0L345 160" stroke="#fff" stroke-width="8"/><path d="M320 286V116M320 116L292 145M320 116L348 145" fill="none" stroke="#fff" stroke-width="9"/>' + car(235, 104, colors.accent, 90, .82) + car(405, 104, colors.light, -90, .82);
+  if (key === "EUROPE:motorways-10") return base + '<path data-road-marking="emergency-corridor" d="M252 0V295M388 0V295" stroke="#fff" stroke-width="7" stroke-dasharray="28 18"/>' + car(188, 155, colors.accent, 90, .9) + car(454, 155, colors.light, 90, .9) + arrow("M286 148H238") + signalArrow(224, 148, "left", "#fff7cb") + arrow("M354 148H402") + signalArrow(416, 148, "right", "#fff7cb");
+  return base + '<path d="M241 0V295M399 0V295" stroke="#fff" stroke-width="8" stroke-dasharray="26 22"/>' + car(164, 88, colors.accent, 90, .9) + car(320, 205, colors.light, -90, .9) + car(474, 92, colors.mid, 90, .9);
+}
+
+function parkingScene(key, colors) {
+  const base = '<rect width="640" height="295" fill="' + colors.ground + '"/><rect x="0" y="66" width="640" height="176" fill="' + colors.road + '"/><path d="M0 74H640M0 234H640" stroke="#fff" stroke-width="8"/>';
+  if (key === "CA:speed-parking-07") return base + '<path data-road-marking="curb-colour-code" d="M56 234H152" stroke="#fff" stroke-width="13"/><path d="M152 234H248" stroke="#4c9f58" stroke-width="13"/><path d="M248 234H344" stroke="#e6c334" stroke-width="13"/><path d="M344 234H440" stroke="#ce3d34" stroke-width="13"/><path d="M440 234H536" stroke="#3f73c5" stroke-width="13"/>' + marker("PASSENGER", 104, 203, "#fff", 11) + marker("TIME", 200, 203, "#fff", 11) + marker("LOAD", 296, 203, "#fff", 11) + marker("NO PARK", 392, 203, "#fff", 11) + marker("DISABLED", 488, 203, "#fff", 11);
+  if (key === "CA:speed-parking-08") return base + '<path data-road-marking="parallel-curb" d="M0 234H640" stroke="#fff" stroke-width="10"/>' + car(250, 204, colors.accent, 0, 1.1) + '<path d="M170 252H330M170 244V260M330 244V260" stroke="' + colors.dark + '" stroke-width="5"/>' + marker("18 in max", 250, 278, colors.dark, 16);
+  if (key === "CA:speed-parking-09") return '<rect width="640" height="295" fill="' + colors.ground + '"/><g data-parking-orientation="downhill-into-curb"><rect x="18" y="28" width="190" height="232" rx="12" fill="' + colors.light + '"/><path d="M26 230L200 136V260H26Z" fill="' + colors.road + '"/><path d="M166 151V260" stroke="#d7d3c2" stroke-width="12"/>' + car(92, 205, colors.accent, -28, .68) + '<path d="M78 218L97 229M97 229L85 244" fill="none" stroke="#fff7cb" stroke-width="6"/>' + marker("DOWNHILL", 113, 58, colors.dark, 15) + marker("INTO CURB", 113, 79, colors.dark, 14) + '</g><g data-parking-orientation="uphill-away-from-curb"><rect x="225" y="28" width="190" height="232" rx="12" fill="' + colors.light + '"/><path d="M233 230L407 136V260H233Z" fill="' + colors.road + '"/><path d="M373 151V260" stroke="#d7d3c2" stroke-width="12"/>' + car(299, 205, colors.mid, -28, .68) + '<path d="M308 218L290 229M290 229L302 244" fill="none" stroke="#fff7cb" stroke-width="6"/>' + marker("UPHILL + CURB", 320, 58, colors.dark, 15) + marker("AWAY FROM CURB", 320, 79, colors.dark, 14) + '</g><g data-parking-orientation="no-curb-right-edge"><rect x="432" y="28" width="190" height="232" rx="12" fill="' + colors.light + '"/><path d="M440 230L614 136V260H440Z" fill="' + colors.road + '"/><path d="M602 143V260" stroke="' + colors.ground + '" stroke-width="18"/>' + car(506, 205, colors.accent, -28, .68) + '<path d="M493 218L512 229M512 229L500 244" fill="none" stroke="#fff7cb" stroke-width="6"/>' + marker("NO CURB", 527, 58, colors.dark, 15) + marker("WHEELS RIGHT", 527, 79, colors.dark, 14) + '</g>';
+  if (key === "CA:speed-parking-10") return base + '<path data-parking-buffer="fire-hydrant-15-feet" d="M150 234H400" stroke="#ce3d34" stroke-width="12"/><path d="M270 224V173M250 189H290M258 171V151H282V171" fill="none" stroke="#ce3d34" stroke-width="11" stroke-linecap="round"/><path d="M150 250H400M150 242V258M400 242V258" stroke="' + colors.dark + '" stroke-width="5"/>' + marker("15 ft clear", 275, 278, colors.dark, 17);
+  if (key === "CA:speed-parking-11") return base + '<path data-road-marking="crosswalk-daylighting" d="M340 78V234M370 78V234M400 78V234M430 78V234" stroke="#fff" stroke-width="13"/><path d="M100 234H340" stroke="#ce3d34" stroke-width="12"/><path d="M100 252H340M100 244V260M340 244V260" stroke="' + colors.dark + '" stroke-width="5"/>' + marker("20 ft clear", 220, 278, colors.dark, 17);
+  if (key === "EUROPE:signals-05") return base + '<rect data-sign-standard="COUNTRY-SPECIFIC-PARKING-PLATE" x="430" y="95" width="105" height="105" fill="#fff" stroke="' + colors.dark + '" stroke-width="6"/><circle cx="482" cy="147" r="31" fill="#2f72b8" stroke="#d83731" stroke-width="8"/>' + marker("LOCAL", 482, 155, "#fff", 14) + car(200, 182, colors.accent, 0, 1.05);
+  return base + car(210, 154, colors.accent, 0, 1.4);
+}
+
+function junctionScene(key, colors) {
+  const base = '<rect width="640" height="295" fill="' + colors.ground + '"/><path d="M0 96H640V220H0ZM258 0H382V295H258Z" fill="' + colors.road + '"/><path d="M218 42V82M422 214V254M42 58H218M422 238H598" stroke="#fff" stroke-width="6"/>';
+  if (key === "CA:signals-06") return base + '<path data-road-marking="crosswalk" d="M258 96H382M258 118H382M258 140H382" stroke="#fff" stroke-width="10"/><path d="M304 220V164" stroke="#51a76d" stroke-width="9"/><rect x="245" y="41" width="150" height="44" fill="#d24b3d" rx="8"/>' + marker("BLOCKED EXIT", 320, 70, "#fff", 16) + car(320, 245, colors.accent, -90, .8);
+  if (key === "CA:signals-07") return base + '<path data-road-marking="all-way-stop" d="M258 96H382M258 220H382" stroke="#fff" stroke-width="9"/>' + caStopSign(231, 84) + caStopSign(409, 232) + car(142, 132, colors.accent, 0, .8) + car(348, 56, colors.mid, 90, .8);
+  if (key === "CA:lanes-08") return base + '<path data-road-marking="turn-signal-distance" d="M320 285V104Q320 84 342 84H412" fill="none" stroke="#fff7cb" stroke-width="9" stroke-dasharray="16 12"/>' + signalArrow(426, 84, "right", "#fff7cb") + marker("SIGNAL 100 ft BEFORE", 320, 266, "#fff", 16);
+  if (key === "CA:lanes-09") return base + '<path data-road-marking="one-way-left-on-red" d="M308 280V170Q308 142 280 142H162" fill="none" stroke="#fff7cb" stroke-width="9"/>' + signalArrow(146, 142, "left", "#fff7cb") + '<path d="M320 228V275M320 228L296 252M320 228L344 252M126 157H175M126 157L150 133M126 157L150 181" stroke="#fff" stroke-width="7" fill="none"/>' + caStopSign(392, 83);
+  if (key === "CA:right-way-01") return base + caStopSign(231, 84) + caStopSign(409, 232) + car(145, 152, colors.accent, 0, .8) + car(320, 56, colors.light, 90, .8) + arrow("M282 55V133") + arrow("M142 153H230");
+  if (key === "CA:right-way-02") return '<rect width="640" height="295" fill="' + colors.ground + '"/><path d="M0 100H640V220H0M320 220V295H448V160H320Z" fill="' + colors.road + '"/><path data-road-layout="t-intersection" d="M0 160H640" stroke="#fff0a2" stroke-width="7" stroke-dasharray="22 18"/>' + car(385, 255, colors.accent, -90, .85) + car(170, 132, colors.light, 0, .82) + arrow("M385 212V176Q385 160 365 160H320");
+  if (key === "CA:right-way-03") return base + car(145, 151, colors.accent, 0, .82) + car(320, 61, colors.light, 90, .82) + '<path data-movement="unprotected-left-yield" d="M320 112V154Q320 177 296 177H232" fill="none" stroke="#fff7cb" stroke-width="8"/>' + signalArrow(215, 177, "left", "#fff7cb");
+  if (key === "CA:speed-parking-04") return '<rect width="640" height="295" fill="' + colors.ground + '"/><path d="M0 108H640V224H0M292 224V295H410V168H292Z" fill="' + colors.road + '"/><path data-road-layout="blind-intersection" d="M0 166H290M410 166H640" stroke="#fff0a2" stroke-width="7" stroke-dasharray="22 18"/><path d="M340 295V215" stroke="#fff7cb" stroke-width="8" stroke-dasharray="12 10"/>' + car(350, 248, colors.accent, -90, .82) + marker("15 mph • edge forward", 320, 70, colors.dark, 18);
+  if (key === "EUROPE:junctions-10") return base + '<path data-road-marking="yellow-box" d="M258 96L382 220M382 96L258 220M289 96L382 189M320 96L382 158M351 96L382 127M258 127L351 220M258 158L320 220M258 189L289 220" stroke="#e8c83d" stroke-width="6"/>' + car(320, 252, colors.accent, -90, .8);
+  return base + car(142, 132, colors.accent, 0, .8) + car(348, 56, colors.mid, 90, .8);
+}
+
+function roundaboutScene(key, colors) {
+  const flow = key.startsWith("CA:") ? '<g data-traffic-flow="counterclockwise"><path d="M390 107A82 82 0 1 0 252 107" fill="none" stroke="#fff0a2" stroke-width="8" stroke-linecap="round"/><path d="M252 107L276 87M252 107L279 119" fill="none" stroke="#fff0a2" stroke-width="8" stroke-linecap="round"/></g>' : '<path data-traffic-flow="follow-entry-signs" d="M258 92A82 82 0 0 1 384 102" fill="none" stroke="#fff0a2" stroke-width="8" stroke-linecap="round"/>';
+  return '<rect width="640" height="295" fill="' + colors.ground + '"/><path d="M0 121H214M426 121H640M320 0V55M320 239V295" stroke="' + colors.road + '" stroke-width="76"/><circle cx="320" cy="147" r="114" fill="' + colors.road + '"/><circle cx="320" cy="147" r="54" fill="' + colors.mid + '"/>' + flow + '<path data-road-marking="yield-line" d="M207 100L226 121L207 142" fill="#fff"/>' + car(243, 184, colors.accent, -40, .65);
+}
+
+function peopleScene(key, colors) {
+  const base = '<rect width="640" height="295" fill="' + colors.sky + '"/><rect y="190" width="640" height="105" fill="' + colors.road + '"/><g stroke="#fff" stroke-width="13"><path d="M240 190V295M286 190V295M332 190V295M378 190V295"/></g>';
+  if (key === "CA:lanes-07") return laneScene(key, colors);
+  if (key === "CA:speed-parking-03") return base + '<path d="M74 190V70" stroke="' + colors.dark + '" stroke-width="10"/>' + caSchoolSign(74, 90) + caSpeedSign(155, 120, "25") + person(310, 151, colors.dark, .8) + person(386, 158, colors.accent, .65) + car(520, 236, colors.mid, 0, .85);
+  if (key === "CA:right-way-08") return base + person(310, 151, colors.dark, .8) + '<path data-pedestrian-aid="white-cane" d="M334 166L364 222" stroke="#fff" stroke-width="7" stroke-linecap="round"/>' + car(118, 236, colors.mid, 0, 1);
+  if (key === "CA:sharing-05") return base + '<rect data-road-layout="streetcar-safety-zone" x="250" y="190" width="156" height="105" fill="#f2d55d"/><path d="M268 202V282M296 202V282M324 202V282M352 202V282M380 202V282" stroke="#fff" stroke-width="8"/>' + car(115, 238, colors.mid, 0, .95) + person(326, 156, colors.dark, .7);
+  if (key === "CA:sharing-08") return base + person(370, 152, colors.dark, .7) + '<circle cx="370" cy="185" r="18" fill="none" stroke="' + colors.dark + '" stroke-width="6"/><circle cx="370" cy="238" r="18" fill="none" stroke="' + colors.dark + '" stroke-width="6"/><path d="M370 202L389 220H357" fill="none" stroke="' + colors.dark + '" stroke-width="6"/>' + car(120, 238, colors.mid, 0, 1) + '<path data-passing-clearance="three-feet" d="M206 202H328M206 194V210M328 194V210" stroke="#fff7cb" stroke-width="5"/>' + marker("3 ft min.", 267, 187, "#fff", 15);
+  if (key === "EUROPE:junctions-05") return base + person(310, 151, colors.dark, .8) + car(118, 236, colors.mid, 0, 1) + marker("ZEBRA: CHECK LOCAL PRIORITY", 430, 82, colors.dark, 15);
+  return base + person(310, 151, colors.dark, .8) + person(386, 158, colors.accent, .65) + car(118, 236, colors.mid, 0, 1);
+}
+
+function vehicleScene(key, colors) {
+  if (key === "CA:conditions-06") return roadPerspective(colors) + '<path data-vehicle-state="skid" d="M250 246Q320 173 390 236" fill="none" stroke="#bcd8df" stroke-width="8" stroke-dasharray="10 9"/>' + car(320, 220, colors.accent, 24, 1.1) + arrow("M320 206L375 178") + marker("STEER WITH THE SKID", 180, 94, colors.dark, 16);
+  if (key === "CA:conditions-10") return roadPerspective(colors) + '<path data-road-edge="shoulder" d="M414 150L492 295" stroke="#e1d4b3" stroke-width="36"/>' + car(385, 232, colors.accent, 0, 1.1) + '<circle cx="418" cy="248" r="12" fill="#d8c398"/><circle cx="418" cy="217" r="12" fill="#d8c398"/>' + arrow("M384 210L352 176");
+  if (key.startsWith("CA:sharing-0")) return roadPerspective(colors) + '<rect data-vehicle-type="large-truck" x="262" y="136" width="116" height="126" rx="12" fill="' + colors.mid + '" stroke="' + colors.dark + '" stroke-width="5"/><rect x="378" y="170" width="66" height="92" rx="8" fill="' + colors.accent + '" stroke="' + colors.dark + '" stroke-width="5"/><circle cx="290" cy="271" r="13" fill="#172a27"/><circle cx="420" cy="271" r="13" fill="#172a27"/>' + car(465, 222, colors.light, 0, .68);
+  return roadPerspective(colors) + car(320, 231, colors.accent, 0, 1.25) + car(385, 166, colors.mid, 0, .65);
+}
+
+function railScene(key, colors) {
+  const base = '<rect width="640" height="295" fill="' + colors.ground + '"/><rect x="0" y="103" width="640" height="110" fill="' + colors.road + '"/><g transform="rotate(-18 320 148)"><path d="M0 88H640M0 208H640" stroke="#3a2d29" stroke-width="13"/><path d="M20 92V204M70 92V204M120 92V204M170 92V204M220 92V204M270 92V204M320 92V204M370 92V204M420 92V204M470 92V204M520 92V204M570 92V204M620 92V204" stroke="#d3b276" stroke-width="10"/></g>';
+  if (key === "CA:conditions-12") return base + '<path data-rail-safety="run-toward-train" d="M270 236L185 174" fill="none" stroke="#fff7cb" stroke-width="9"/>' + signalArrow(173, 164, "left", "#fff7cb") + car(320, 175, colors.accent, 18, .85) + '<path d="M488 60H640V108H488Z" fill="' + colors.mid + '"/><path d="M488 76H640M488 93H640" stroke="#252525" stroke-width="7"/>' + marker("TRAIN", 565, 52, colors.dark, 15);
+  if (key === "EUROPE:junctions-04") return base + '<path data-vehicle-type="tram" d="M436 52H610V142H436Z" fill="' + colors.light + '" stroke="' + colors.dark + '" stroke-width="6"/><path d="M458 80H495M514 80H551M570 80H595" stroke="' + colors.mid + '" stroke-width="16"/><path d="M496 52V20M560 52V20" stroke="' + colors.dark + '" stroke-width="5"/>' + car(152, 161, colors.accent, 0, .75);
+  return base + '<path data-sign-standard="RAIL-CROSSBUCK" d="M112 52L196 136M196 52L112 136" stroke="#fff" stroke-width="13"/><path d="M154 52V183" stroke="' + colors.dark + '" stroke-width="10"/>' + car(320, 245, colors.accent, 0, .88);
+}
+
+function sceneLayer(card, spec, colors, region) {
+  const key = region + ":" + card.id;
+  switch (spec.kind) {
+    case "signal": return signalScene(key, colors);
+    case "sign": return signScene(key, colors, spec.symbol);
+    case "lanes": return laneScene(key, colors);
+    case "junction": return junctionScene(key, colors);
+    case "roundabout": return roundaboutScene(key, colors);
+    case "people": return peopleScene(key, colors);
+    case "vehicle": return vehicleScene(key, colors);
+    case "parking": return parkingScene(key, colors);
+    case "rail": return railScene(key, colors);
+    default: return legacySceneLayer(spec.kind, colors, spec.symbol);
+  }
+}
+
+function legacySceneLayer(kind, colors, symbol) {
   switch (kind) {
     case "document":
       return `<rect width="640" height="295" fill="${colors.sky}"/>
@@ -273,7 +436,7 @@ function renderSvg(card, spec, region) {
   const cueText = cueLines.map((line, index) => `<tspan x="32" dy="${index ? 23 : 0}">${escapeXml(line)}</tspan>`).join("");
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="${escapeXml(card.id)}" role="img" aria-labelledby="title-${escapeXml(card.id)}">
   <title id="title-${escapeXml(card.id)}">${escapeXml(card.title)} — ${escapeXml(spec.cue)}</title>
-  ${sceneLayer(spec.kind, palette, spec.symbol)}
+  ${sceneLayer(card, spec, palette, region)}
   <rect y="295" width="640" height="65" fill="${palette.dark}"/>
   <text x="608" y="323" fill="${palette.accent}" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">${escapeXml(region.toUpperCase())} · ${escapeXml(spec.kind.toUpperCase())}</text>
   <text x="32" y="320" fill="${palette.light}" font-family="Arial, sans-serif" font-size="17" font-weight="700">${cueText}</text>

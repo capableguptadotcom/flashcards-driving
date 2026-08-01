@@ -4,10 +4,7 @@
     <circle cx="500" cy="62" r="34" fill="#f5d56b"/>
     <path d="M0 154L110 80L214 166L310 88L420 170L530 75L640 158V295H0Z" fill="#c7d5ae"/>
     <path d="M230 295L294 132H346L414 295Z" fill="#3c4341"/>
-    <path d="M319 144V280" stroke="#fff2a8" stroke-width="7" stroke-dasharray="20 19"/>
-        <path d="M145 224V92" stroke="#163b32" stroke-width="11"/>
-        <circle cx="145" cy="82" r="62" fill="#fff8e9" stroke="#d85c3d" stroke-width="10"/>
-        <text x="145" y="96" fill="#163b32" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" letter-spacing="1">STOP</text>
+    <path d="M319 144V280" stroke="#fff2a8" stroke-width="7" stroke-dasharray="20 19"/><path d="M145 224V144" stroke="#1f2926" stroke-width="11"/><g data-sign-standard="CA-MUTCD-R1-1" transform="translate(145 82)"><path d="M-42 -58H42L58 -42V42L42 58H-42L-58 42V-42Z" fill="#b92728" stroke="#fff" stroke-width="7"/><text x="0" y="11" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="800" text-anchor="middle">STOP</text></g>
   <rect y="295" width="640" height="65" fill="#163b32"/>
   <text x="608" y="323" fill="#d85c3d" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · SIGN</text>
   <text x="32" y="320" fill="#fff8e9" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Octagon identifies stop through fog</tspan></text>

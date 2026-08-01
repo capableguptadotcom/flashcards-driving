@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="right-way-12" role="img" aria-labelledby="title-right-way-12">
   <title id="title-right-way-12">The officer’s contradiction — Officer direction overrides the red light</title>
-  <rect width="640" height="295" fill="#c8b6d8"/><rect y="190" width="640" height="105" fill="#3f4145"/>
-        <g stroke="#fff" stroke-width="13"><path d="M240 190V295M286 190V295M332 190V295M378 190V295"/></g>
-        <g transform="translate(310 151) scale(0.8)" fill="#43385f" stroke="#43385f" stroke-linecap="round">
+  <rect width="640" height="295" fill="#c8b6d8"/><rect y="190" width="640" height="105" fill="#3f4145"/><g stroke="#fff" stroke-width="13"><path d="M240 190V295M286 190V295M332 190V295M378 190V295"/></g><g transform="translate(310 151) scale(0.8)" fill="#43385f" stroke="#43385f" stroke-linecap="round">
     <circle cy="-23" r="9"/><path d="M0 -13V18M0 -2L-16 8M0 -2L16 8M0 18L-13 38M0 18L14 38" fill="none" stroke-width="8"/>
   </g><g transform="translate(386 158) scale(0.65)" fill="#d35c43" stroke="#d35c43" stroke-linecap="round">
     <circle cy="-23" r="9"/><path d="M0 -13V18M0 -2L-16 8M0 -2L16 8M0 18L-13 38M0 18L14 38" fill="none" stroke-width="8"/>
@@ -11,8 +9,6 @@
     <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
     <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
   </g>
-        <rect x="405" y="61" width="198" height="68" rx="12" fill="#43385f"/>
-        <text x="504" y="106" fill="#fff9ef" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">OFFICER</text>
   <rect y="295" width="640" height="65" fill="#43385f"/>
   <text x="608" y="323" fill="#d35c43" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · PEOPLE</text>
   <text x="32" y="320" fill="#fff9ef" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Officer direction overrides the red light</tspan></text>

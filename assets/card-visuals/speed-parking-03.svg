@@ -1,18 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="speed-parking-03" role="img" aria-labelledby="title-speed-parking-03">
   <title id="title-speed-parking-03">The children outside the gate — Slow for children outside the school</title>
-  <rect width="640" height="295" fill="#c8b6d8"/><rect y="190" width="640" height="105" fill="#3f4145"/>
-        <g stroke="#fff" stroke-width="13"><path d="M240 190V295M286 190V295M332 190V295M378 190V295"/></g>
-        <g transform="translate(310 151) scale(0.8)" fill="#43385f" stroke="#43385f" stroke-linecap="round">
+  <rect width="640" height="295" fill="#c8b6d8"/><rect y="190" width="640" height="105" fill="#3f4145"/><g stroke="#fff" stroke-width="13"><path d="M240 190V295M286 190V295M332 190V295M378 190V295"/></g><path d="M74 190V70" stroke="#43385f" stroke-width="10"/><g data-sign-standard="CA-MUTCD-S1-1" transform="translate(74 90)"><path d="M0 -62L53 -25V57H-53V-25Z" fill="#d6ff35" stroke="#1f2926" stroke-width="8"/><circle cx="-15" cy="-18" r="7" fill="#1f2926"/><circle cx="13" cy="-12" r="6" fill="#1f2926"/><path d="M-15 -10V21M-15 0L-30 12M-15 0L0 11M-15 21L-28 42M-15 21L-1 43M13 -5V23M13 4L2 15M13 5L27 15M13 23L2 42M13 23L29 42" fill="none" stroke="#1f2926" stroke-width="7" stroke-linecap="round"/></g><g data-sign-standard="CA-MUTCD-R2-1" transform="translate(155 120)"><rect x="-48" y="-65" width="96" height="130" rx="2" fill="#fff" stroke="#1f2926" stroke-width="6"/><text x="0" y="-30" fill="#1f2926" font-family="Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">SPEED</text><text x="0" y="-10" fill="#1f2926" font-family="Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">LIMIT</text><text x="0" y="40" fill="#1f2926" font-family="Arial, sans-serif" font-size="46" font-weight="800" text-anchor="middle">25</text></g><g transform="translate(310 151) scale(0.8)" fill="#43385f" stroke="#43385f" stroke-linecap="round">
     <circle cy="-23" r="9"/><path d="M0 -13V18M0 -2L-16 8M0 -2L16 8M0 18L-13 38M0 18L14 38" fill="none" stroke-width="8"/>
   </g><g transform="translate(386 158) scale(0.65)" fill="#d35c43" stroke="#d35c43" stroke-linecap="round">
     <circle cy="-23" r="9"/><path d="M0 -13V18M0 -2L-16 8M0 -2L16 8M0 18L-13 38M0 18L14 38" fill="none" stroke-width="8"/>
-  </g><g transform="translate(118 236) rotate(0) scale(1)">
+  </g><g transform="translate(520 236) rotate(0) scale(0.85)">
     <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#74608d" stroke="#172a27" stroke-width="3"/>
     <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
     <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
   </g>
-        <rect x="405" y="61" width="198" height="68" rx="12" fill="#43385f"/>
-        <text x="504" y="106" fill="#fff9ef" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">25 / 500</text>
   <rect y="295" width="640" height="65" fill="#43385f"/>
   <text x="608" y="323" fill="#d35c43" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · PEOPLE</text>
   <text x="32" y="320" fill="#fff9ef" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Slow for children outside the school</tspan></text>

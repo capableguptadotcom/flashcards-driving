@@ -1,18 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="sharing-08" role="img" aria-labelledby="title-sharing-08">
   <title id="title-sharing-08">The three-foot bicycle bubble — Wait until a safe bicycle pass is possible</title>
-  <rect width="640" height="295" fill="#a9c2df"/><rect y="190" width="640" height="105" fill="#3d4148"/>
-        <g stroke="#fff" stroke-width="13"><path d="M240 190V295M286 190V295M332 190V295M378 190V295"/></g>
-        <g transform="translate(310 151) scale(0.8)" fill="#273f67" stroke="#273f67" stroke-linecap="round">
+  <rect width="640" height="295" fill="#a9c2df"/><rect y="190" width="640" height="105" fill="#3d4148"/><g stroke="#fff" stroke-width="13"><path d="M240 190V295M286 190V295M332 190V295M378 190V295"/></g><g transform="translate(370 152) scale(0.7)" fill="#273f67" stroke="#273f67" stroke-linecap="round">
     <circle cy="-23" r="9"/><path d="M0 -13V18M0 -2L-16 8M0 -2L16 8M0 18L-13 38M0 18L14 38" fill="none" stroke-width="8"/>
-  </g><g transform="translate(386 158) scale(0.65)" fill="#d75b36" stroke="#d75b36" stroke-linecap="round">
-    <circle cy="-23" r="9"/><path d="M0 -13V18M0 -2L-16 8M0 -2L16 8M0 18L-13 38M0 18L14 38" fill="none" stroke-width="8"/>
-  </g><g transform="translate(118 236) rotate(0) scale(1)">
+  </g><circle cx="370" cy="185" r="18" fill="none" stroke="#273f67" stroke-width="6"/><circle cx="370" cy="238" r="18" fill="none" stroke="#273f67" stroke-width="6"/><path d="M370 202L389 220H357" fill="none" stroke="#273f67" stroke-width="6"/><g transform="translate(120 238) rotate(0) scale(1)">
     <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#4f739c" stroke="#172a27" stroke-width="3"/>
     <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
     <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
-  </g>
-        <rect x="405" y="61" width="198" height="68" rx="12" fill="#273f67"/>
-        <text x="504" y="106" fill="#fff9eb" font-family="Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" letter-spacing="1">3 FT</text>
+  </g><path data-passing-clearance="three-feet" d="M206 202H328M206 194V210M328 194V210" stroke="#fff7cb" stroke-width="5"/><text x="267" y="187" fill="#fff" font-family="Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">3 ft min.</text>
   <rect y="295" width="640" height="65" fill="#273f67"/>
   <text x="608" y="323" fill="#d75b36" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · PEOPLE</text>
   <text x="32" y="320" fill="#fff9eb" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Wait until a safe bicycle pass is possible</tspan></text>

@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="speed-parking-06" role="img" aria-labelledby="title-speed-parking-06">
   <title id="title-speed-parking-06">The hidden railroad view — Limited rail view requires lower speed</title>
-  <rect width="640" height="295" fill="#b9cc9d"/><rect x="0" y="103" width="640" height="110" fill="#3d4148"/>
-        <g transform="rotate(-18 320 148)"><path d="M0 88H640M0 208H640" stroke="#3a2d29" stroke-width="13"/><path d="M20 92V204M70 92V204M120 92V204M170 92V204M220 92V204M270 92V204M320 92V204M370 92V204M420 92V204M470 92V204M520 92V204M570 92V204M620 92V204" stroke="#d3b276" stroke-width="10"/></g>
-        <path d="M130 52V183M130 78L258 146" stroke="#273f67" stroke-width="12"/><circle cx="130" cy="48" r="28" fill="#d75b36"/>
-        <rect x="350" y="39" width="234" height="68" rx="12" fill="#273f67"/>
-        <text x="467" y="84" fill="#fff9eb" font-family="Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle" letter-spacing="1">15 / 100 FT</text>
+  <rect width="640" height="295" fill="#b9cc9d"/><rect x="0" y="103" width="640" height="110" fill="#3d4148"/><g transform="rotate(-18 320 148)"><path d="M0 88H640M0 208H640" stroke="#3a2d29" stroke-width="13"/><path d="M20 92V204M70 92V204M120 92V204M170 92V204M220 92V204M270 92V204M320 92V204M370 92V204M420 92V204M470 92V204M520 92V204M570 92V204M620 92V204" stroke="#d3b276" stroke-width="10"/></g><path data-sign-standard="RAIL-CROSSBUCK" d="M112 52L196 136M196 52L112 136" stroke="#fff" stroke-width="13"/><path d="M154 52V183" stroke="#273f67" stroke-width="10"/><g transform="translate(320 245) rotate(0) scale(0.88)">
+    <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#d75b36" stroke="#172a27" stroke-width="3"/>
+    <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
+    <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
+  </g>
   <rect y="295" width="640" height="65" fill="#273f67"/>
   <text x="608" y="323" fill="#d75b36" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">CA · RAIL</text>
   <text x="32" y="320" fill="#fff9eb" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Limited rail view requires lower speed</tspan></text>

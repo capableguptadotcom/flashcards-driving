@@ -1,16 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" data-card-id="junctions-02" role="img" aria-labelledby="title-junctions-02">
   <title id="title-junctions-02">Entering the circle — Read entry signs and lane arrows</title>
-  <rect width="640" height="295" fill="#d6b66d"/>
-        <path d="M0 121H214M426 121H640M320 0V55M320 239V295" stroke="#41433f" stroke-width="76"/>
-        <circle cx="320" cy="147" r="114" fill="#41433f"/><circle cx="320" cy="147" r="54" fill="#4c7680"/>
-        <path d="M259 90A82 82 0 0 1 384 102M390 108L372 84M380 105L408 92" fill="none" stroke="#fff0a2" stroke-width="8" stroke-linecap="round"/>
-        <g transform="translate(243 184) rotate(-40) scale(0.65)">
+  <rect width="640" height="295" fill="#d6b66d"/><path d="M0 121H214M426 121H640M320 0V55M320 239V295" stroke="#41433f" stroke-width="76"/><circle cx="320" cy="147" r="114" fill="#41433f"/><circle cx="320" cy="147" r="54" fill="#4c7680"/><path data-traffic-flow="follow-entry-signs" d="M258 92A82 82 0 0 1 384 102" fill="none" stroke="#fff0a2" stroke-width="8" stroke-linecap="round"/><path data-road-marking="yield-line" d="M207 100L226 121L207 142" fill="#fff"/><g transform="translate(243 184) rotate(-40) scale(0.65)">
     <rect x="-34" y="-16" width="68" height="32" rx="10" fill="#c54535" stroke="#172a27" stroke-width="3"/>
     <rect x="-16" y="-12" width="32" height="24" rx="5" fill="#cfe4e3" opacity=".9"/>
     <circle cx="-21" cy="17" r="5" fill="#172a27"/><circle cx="21" cy="17" r="5" fill="#172a27"/>
   </g>
-        <rect x="244" y="121" width="152" height="52" rx="10" fill="#243d42"/>
-        <text x="320" y="156" fill="#fffaf0" font-family="Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle" letter-spacing="1">YIELD ?</text>
   <rect y="295" width="640" height="65" fill="#243d42"/>
   <text x="608" y="323" fill="#c54535" font-family="Arial, sans-serif" font-size="12" font-weight="800" text-anchor="end" letter-spacing="1.5">EUROPE · ROUNDABOUT</text>
   <text x="32" y="320" fill="#fffaf0" font-family="Arial, sans-serif" font-size="17" font-weight="700"><tspan x="32" dy="0">Read entry signs and lane arrows</tspan></text>
