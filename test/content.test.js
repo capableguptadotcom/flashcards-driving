@@ -23,7 +23,7 @@ test("curriculum has nine complete 12-card decks", () => {
 test("every card has unique identity and complete learning fields", () => {
   assert.equal(new Set(cards.map((card) => card.id)).size, cards.length);
   for (const card of cards) {
-    for (const field of ["id", "deck", "title", "scene", "answer", "why", "memory"]) {
+    for (const field of ["id", "deck", "title", "question", "scene", "answer", "why", "memory", "sourceUrl"]) {
       assert.equal(typeof card[field], "string", `${card.id}.${field}`);
       assert.ok(card[field].trim().length > 0, `${card.id}.${field}`);
     }
@@ -31,6 +31,18 @@ test("every card has unique identity and complete learning fields", () => {
     assert.ok(Number.isInteger(card.page) && card.page >= 1 && card.page <= 84, `${card.id}.page`);
     assert.ok(Array.isArray(card.tags) && card.tags.length > 0, `${card.id}.tags`);
   }
+});
+
+test("corrected California rules retain their governing conditions", () => {
+  const byId = Object.fromEntries(cards.map((card) => [card.id, card]));
+  assert.match(byId["right-way-11"].scene, /passenger car/);
+  assert.match(byId["right-way-11"].why, /2026/);
+  assert.match(byId["speed-parking-11"].answer, /vehicle-approach side/);
+  assert.match(byId["lanes-09"].scene, /not a red arrow/);
+  assert.match(byId["safe-driver-09"].answer, /age eight or a height/);
+  assert.match(byId["safe-driver-09"].sourceUrl, /chp.ca.gov/);
+  assert.match(byId["conditions-04"].answer, /Even 30 mph may be too fast/);
+  assert.equal(byId["right-way-11"].revision, 2);
 });
 
 test("high-volatility facts use current handbook values", () => {

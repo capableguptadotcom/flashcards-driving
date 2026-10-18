@@ -32,9 +32,10 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir _site
-          cp index.html styles.css app.js cards.js visuals.js CONTENT_LICENSE.md _site/
+          cp index.html styles.css app.js progress.js cards.js visuals.js CONTENT_LICENSE.md _site/
           cp -R assets _site/assets
           cp -R europe _site/europe
+          cp -R india _site/india
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site

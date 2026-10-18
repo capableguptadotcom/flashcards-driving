@@ -1,0 +1,1 @@
+window.DRIVING_GUIDE = window.INDIA_DRIVING;

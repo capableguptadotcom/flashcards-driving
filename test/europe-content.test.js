@@ -72,6 +72,8 @@ test("Europe page and browser state stay separate from California", () => {
   assert.match(app, /window\.EUROPE_DRIVING/);
   assert.match(app, /continental-roadbook-/);
   assert.doesNotMatch(app, /ROAD_CARDS|golden-state-roadtrip/);
-  assert.match(californiaApp, /golden-state-roadtrip-progress-v1/);
+  const progress = fs.readFileSync(path.join(root, "progress.js"), "utf8");
+  assert.match(progress, /golden-state-roadtrip-progress-v1/);
+  assert.match(progress, /golden-state-roadtrip-progress-v2/);
   assert.doesNotMatch(californiaApp, /EUROPE_DRIVING|continental-roadbook/);
 });

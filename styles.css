@@ -1639,6 +1639,71 @@ footer p:last-child {
   }
 }
 
+/* Study controls shared by the California and India guides. */
+[hidden] { display: none !important; }
+button:disabled { cursor: default; opacity: .62; box-shadow: none; transform: none; }
+.hero { min-height: auto; gap: 64px; padding: 48px 0; }
+.hero h1 { font-size: clamp(42px, 5.2vw, 68px); }
+.hero-intro { font-size: 16px; margin-top: 22px; }
+.hero-actions { flex-wrap: wrap; margin-top: 24px; }
+.hero-proof { margin-top: 26px; }
+.route-line { display: none; }
+.study-start { padding: 28px; border: 1px solid var(--line); border-radius: 8px; background: var(--white); }
+.study-start h2 { margin: 0 0 18px; font: 600 36px/1.05 var(--serif); }
+.study-start p { color: var(--muted); font-size: 14px; }
+.study-start dl { display: grid; grid-template-columns: 66px 1fr; gap: 10px; font-size: 13px; }
+.study-start dt { font-weight: 700; }
+.study-start dd { margin: 0; color: var(--muted); }
+.study-start .study-note { padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; }
+.progress-strip { grid-template-columns: 1fr auto; gap: 12px 28px; align-items: center; }
+#save-status { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 12px; }
+#save-status.save-warning { color: var(--orange); }
+.progress-tools { width: min(1240px, calc(100% - 48px)); margin: 16px auto 0; color: var(--muted); font-size: 13px; }
+.progress-tools summary, .official-illustration summary { cursor: pointer; width: fit-content; padding: 8px 0; }
+.progress-tools p { max-width: 780px; }
+.progress-actions { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+.import-label { cursor: pointer; color: var(--ink); }
+.progress-tools:has(#import-progress:focus-visible) .import-label { outline: 3px solid var(--orange); outline-offset: 3px; }
+.section { padding: 72px 0; }
+.deck-card { min-height: 230px; }
+.deck-card h3 { margin-top: 28px; }
+.deck-detail { display: block; font-size: 12px; color: var(--muted); margin: 24px 0 8px; }
+.deck-progress { display: block; }
+.library-tools { display: flex; gap: 20px; align-items: end; justify-content: space-between; margin-top: 20px; }
+.library-tools label { display: grid; gap: 6px; font-size: 12px; color: var(--muted); }
+.library-tools select { font: inherit; padding: 10px; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; background: var(--white); }
+.library-card { grid-template-columns: 34px minmax(0, 1fr) auto; }
+.library-question { display: block; color: var(--muted); font-size: 13px; margin-top: 7px; }
+.empty-state { color: var(--muted); padding: 24px; }
+.question-card .scene-copy { margin: 36px 0 24px; color: var(--ink); }
+.question-card h2 { font-size: clamp(27px, 4vw, 39px); }
+.reveal-card h2 { margin-top: 20px; font-size: clamp(23px, 3.4vw, 32px); }
+.study-card { min-height: 350px; padding: clamp(24px, 4vw, 38px); }
+.study-card-top { flex-wrap: wrap; }
+.recall-hint, .rating-instruction { color: var(--muted); font-size: 12px; margin-top: 28px; }
+.scope-note { font: 11px var(--mono); color: var(--orange); margin: 16px 0; }
+.source-chip { color: var(--pine); font-size: 12px; }
+.source-date { color: var(--muted); font-size: 11px; margin: 6px 0; }
+.official-illustration { font-size: 13px; margin-top: 20px; }
+.official-illustration figure { background: #fff; padding: 16px; margin: 12px 0; border-radius: 8px; width: fit-content; max-width: 100%; }
+.official-illustration img { display: block; max-width: 100%; max-height: 320px; object-fit: contain; }
+.official-illustration figcaption { margin-top: 10px; color: #46574c; font-size: 11px; }
+.rating-button { min-height: 54px; }
+.rating-button small { margin: 4px 0 0; }
+.toast { color: var(--paper); }
+@media (max-width: 900px) { .hero { gap: 28px; } .study-start { display: none; } }
+@media (max-width: 650px) {
+  .hero { padding: 32px 0; }
+  .progress-strip { grid-template-columns: 1fr; padding: 20px; }
+  .progress-tools { width: calc(100% - 30px); }
+  .library-tools { align-items: stretch; flex-direction: column; }
+  .section { padding: 52px 0; }
+  .study-controls { flex-wrap: wrap; }
+  .study-card { min-height: 0; }
+  .guide-switcher a { padding: 5px 6px; font-size: 10px; }
+  .brand strong { font-size: 14px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

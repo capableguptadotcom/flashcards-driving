@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260731-5" />
+    <link rel="stylesheet" href="styles.css?v=20261017-1" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -40,6 +40,7 @@
             <span class="guide-name-short" aria-hidden="true">CA</span>
           </a>
           <a href="europe/" aria-label="Europe">Europe</a>
+          <a href="india/" aria-label="India">India</a>
         </div>
         <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode">
           <span aria-hidden="true">◐</span>
@@ -51,42 +52,33 @@
       <section class="hero" id="top">
         <div class="route-line" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow">California Class C · 2025 handbook</p>
-          <h1>Don’t memorize the road.<br /><em>Learn to read it.</em></h1>
+          <p class="eyebrow">California Class C · with 2026 rule updates</p>
+          <h1>Know the rule.<br /><em>Make the right move.</em></h1>
           <p class="hero-intro">
             Short road stories that turn DMV rules into decisions you can see, feel, and remember.
             Predict the move. Reveal the reason. Keep the instinct.
           </p>
           <div class="hero-actions">
             <button class="primary-button" id="start-session" type="button">
-              Start a 10-card drive <span aria-hidden="true">→</span>
+              Practice 10 cards <span aria-hidden="true">→</span>
             </button>
             <button class="text-button" id="review-due" type="button">Review cards to revisit</button>
+            <button class="secondary-button" id="resume-session" type="button" hidden>Resume session</button>
           </div>
           <div class="hero-proof" aria-label="Site summary">
             <div><strong id="total-count">100+</strong><span>road stories</span></div>
             <div><strong>9</strong><span>complete decks</span></div>
-            <div><strong>0</strong><span>trick questions</span></div>
+            <div><strong id="due-count">0</strong><span>cards due</span></div>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="Example flashcard">
-          <div class="card-stamp">CA · QUICK READ</div>
-          <div class="road-scene road-scene--sunset" aria-hidden="true">
-            <div class="sun"></div>
-            <div class="mountain mountain--back"></div>
-            <div class="mountain mountain--front"></div>
-            <div class="road"><span></span></div>
-            <div class="sign sign--speed">25</div>
-          </div>
-          <p class="scene-label">THE SCHOOL-ZONE SUNRISE</p>
-          <h2>Kids are outside. The sign says 25. Your speed?</h2>
-          <div class="mini-answer">
-            <span>Read the whole scene</span>
-            <strong>25 mph within 500 ft</strong>
-          </div>
-          <p class="margin-note">The number matters. So does when it applies.</p>
-        </div>
+        <aside class="study-start" aria-label="How practice works">
+          <p class="eyebrow">Your next good habit</p>
+          <h2>Understand it.<br />Then recall it.</h2>
+          <p>Read a real driving situation, choose your next move, then reveal the rule and its reason.</p>
+          <dl><dt>Again</dt><dd>Bring the card back now.</dd><dt>Almost</dt><dd>Review tomorrow.</dd><dt>Got it</dt><dd>Return after a few days.</dd></dl>
+          <p class="study-note">Your confidence is a study cue, not a prediction of your DMV score.</p>
+        </aside>
       </section>
 
       <section class="progress-strip" aria-label="Your study progress">
@@ -94,15 +86,27 @@
           <span class="progress-label">YOUR ROUTE SO FAR</span>
           <div class="progress-track" aria-hidden="true"><span id="overall-progress-bar"></span></div>
         </div>
-        <strong id="overall-progress-text">0 learned · start anywhere</strong>
-        <button class="quiet-button" id="reset-progress" type="button">Reset progress</button>
+        <strong id="overall-progress-text">Start anywhere</strong>
+        <p id="save-status" role="status">Progress saves automatically in this browser.</p>
       </section>
+
+      <details class="progress-tools">
+        <summary>Manage saved progress</summary>
+        <p>Progress stays in this browser on this device. Clearing site data removes it. Download a backup to keep a copy or move to another device.</p>
+        <div class="progress-actions">
+          <button class="secondary-button" id="export-progress" type="button">Download backup</button>
+          <label class="secondary-button import-label" for="import-progress">Restore backup</label>
+          <input class="sr-only" id="import-progress" type="file" accept="application/json,.json" />
+          <button class="quiet-button" id="reset-progress" type="button">Reset California progress</button>
+        </div>
+        <p>Restoring merges card history, keeping the newer review for each card. California, Europe, and India progress are stored separately.</p>
+      </details>
 
       <section class="section decks-section" id="decks">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Choose your stretch of road</p>
-            <h2>Nine decks. One complete route.</h2>
+            <h2>Nine decks. Build your road sense.</h2>
           </div>
           <p>Start where you feel least certain, or follow the route from permit desk to collision scene.</p>
         </div>
@@ -135,6 +139,18 @@
           </label>
         </div>
         <div class="filter-row" id="filter-row" aria-label="Filter flashcards"></div>
+        <div class="library-tools">
+          <label for="status-filter">Show cards
+            <select id="status-filter">
+              <option value="all">All progress</option>
+              <option value="unseen">Not studied yet</option>
+              <option value="due">Due for review</option>
+              <option value="learning">Still practicing</option>
+              <option value="confident">Feeling confident</option>
+            </select>
+          </label>
+          <button class="secondary-button" id="study-results" type="button">Study these cards</button>
+        </div>
         <p class="results-count" id="results-count" aria-live="polite"></p>
         <div class="card-library" id="card-library"></div>
         <button class="secondary-button load-more" id="load-more" type="button">Show more cards</button>
@@ -167,8 +183,9 @@
         <p class="eyebrow">Source lane</p>
         <h2>Study with receipts.</h2>
         <p>
-          Every story is adapted from the California Driver’s Handbook and checked against official California
-          DMV sample tests. Card citations use the handbook’s printed page numbers.
+          Study cards follow the California Driver’s Handbook, with source links on every answer.
+          The October 2026 review adds the current move-over rule and clarifies common exceptions. Printed page
+          references refer to the 2025 handbook; official web sources take priority for later changes.
         </p>
         <div class="source-links">
           <a href="https://www.dmv.ca.gov/portal/handbook/california-driver-handbook/" target="_blank" rel="noreferrer">Current DMV handbook <span aria-hidden="true">↗</span></a>
@@ -200,14 +217,14 @@
 
         <div class="study-stage" id="study-stage" aria-live="polite"></div>
         <div class="study-controls" id="study-controls"></div>
-        <p class="keyboard-hint">Space: reveal · 1: revisit · 2: almost · 3: got it</p>
+        <p class="keyboard-hint">Space: reveal · 1: again · 2: almost · 3: got it · Esc: save and close</p>
       </div>
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-    <script src="cards.js?v=20260731-5"></script>
-    <script src="visuals.js?v=20260731-5"></script>
-    <script src="app.js?v=20260731-5"></script>
+    <script src="cards.js?v=20261017-1"></script>
+    <script src="progress.js?v=20261017-1"></script>
+    <script src="app.js?v=20261017-1"></script>
   </body>
 </html>

@@ -2,11 +2,11 @@
   "name": "road-rules-flashcards",
   "version": "1.0.0",
   "private": true,
-  "description": "Separate scenario-based California and Europe driving flashcards",
+  "description": "Independent California, Europe and India driving flashcards",
   "scripts": {
-    "test": "node --test",
+    "test": "node --test test/*.test.js",
     "generate:visuals": "node scripts/generate-card-visuals.mjs",
     "visuals:check": "node scripts/generate-card-visuals.mjs --check",
-    "check": "node --check app.js && node --check cards.js && node --check visuals.js && node --check europe/app.js && node --check europe/cards.js && node --check europe/visuals.js && npm run visuals:check && node --test"
+    "check": "node --check app.js && node --check progress.js && node --check cards.js && node --check visuals.js && node --check europe/app.js && node --check europe/cards.js && node --check europe/visuals.js && node --check india/cards.js && node --check india/guide.js && npm run visuals:check && npm test"
   }
 }

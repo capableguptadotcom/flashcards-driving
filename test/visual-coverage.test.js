@@ -65,13 +65,19 @@ for (const definition of curricula) {
   });
 }
 
-test("both pages load their own visual module before their application", () => {
+test("California uses official illustrations while Europe keeps its separate visual module", () => {
   const california = fs.readFileSync(path.join(root, "index.html"), "utf8");
   const europe = fs.readFileSync(path.join(root, "europe", "index.html"), "utf8");
 
-  assert.ok(california.indexOf("visuals.js") < california.indexOf("app.js"));
+  assert.doesNotMatch(california, /<script src="visuals.js/);
   assert.ok(europe.indexOf("visuals.js") < europe.indexOf("app.js"));
-  assert.match(fs.readFileSync(path.join(root, "app.js"), "utf8"), /window\.ROAD_VISUALS/);
+  const { cards } = loadCurriculum(root, "cards.js", "ROAD_CARDS", "ROAD_VISUALS");
+  const illustrated = cards.filter((card) => card.illustration);
+  assert.equal(illustrated.length, 7);
+  for (const card of illustrated) {
+    assert.ok(fs.statSync(path.join(root, card.illustration.src)).size > 1000);
+    assert.ok(card.illustration.alt.length > 20);
+  }
   assert.match(fs.readFileSync(path.join(root, "europe", "app.js"), "utf8"), /window\.EUROPE_VISUALS/);
 });
 

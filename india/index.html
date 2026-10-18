@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn India's national driving rules through clear scenarios, official sources, and honest state/RTO guidance."
+    />
+    <meta name="theme-color" content="#f4efe4" />
+    <title>India Roadbook — national driving flashcards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css?v=20261017-1" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="India Roadbook home"
+        ><span class="brand-mark" aria-hidden="true"><span></span></span
+        ><span><strong>India</strong><small>Roadbook</small></span></a
+      >
+      <nav aria-label="Primary navigation">
+        <a href="#decks">Decks</a><a href="#library">Library</a
+        ><a href="#sources">Official sources</a>
+      </nav>
+      <div class="header-actions">
+        <div
+          class="guide-switcher"
+          role="navigation"
+          aria-label="Choose driving guide"
+        >
+          <a href="../" aria-label="California"
+            ><span class="guide-name-full" aria-hidden="true">California</span
+            ><span class="guide-name-short" aria-hidden="true">CA</span></a
+          >
+          <a href="../europe/" aria-label="Europe">Europe</a>
+          <a href="./" aria-label="India" aria-current="page">India</a>
+        </div>
+        <button
+          class="icon-button"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+        >
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">India · national rules · official sources</p>
+          <h1>Keep left.<br /><em>Think ahead.</em></h1>
+          <p class="hero-intro">
+            Learn the national rules through everyday driving situations.
+            Understand the move, the reason, and when your state or RTO needs a
+            closer look.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" id="start-session" type="button">
+              Practice 10 cards <span aria-hidden="true">→</span>
+            </button>
+            <button class="text-button" id="review-due" type="button">
+              Review due cards
+            </button>
+            <button
+              class="secondary-button"
+              id="resume-session"
+              type="button"
+              hidden
+            >
+              Resume session
+            </button>
+          </div>
+          <div class="hero-proof" aria-label="Site summary">
+            <div>
+              <strong id="total-count">60</strong><span>road stories</span>
+            </div>
+            <div><strong>India</strong><span>national core</span></div>
+            <div><strong id="due-count">0</strong><span>cards due</span></div>
+          </div>
+        </div>
+        <aside class="study-start" aria-label="National and local rules">
+          <p class="eyebrow">Know which rule applies</p>
+          <h2>National habits.<br />Local details.</h2>
+          <p>
+            The Motor Vehicles Act and national driving regulations form the
+            core. State notifications, road signs, and RTO procedures can add
+            details.
+          </p>
+          <p>
+            Every answer links to its official source. Cards marked “State/RTO
+            check” explain what to verify locally.
+          </p>
+          <p class="study-note">
+            This is a learning guide. Exam format, appointments, fees, and some
+            restrictions depend on your state.
+          </p>
+        </aside>
+      </section>
+      <section class="progress-strip" aria-label="Your study progress">
+        <div>
+          <span class="progress-label">YOUR INDIA PROGRESS</span>
+          <div class="progress-track" aria-hidden="true">
+            <span id="overall-progress-bar"></span>
+          </div>
+        </div>
+        <strong id="overall-progress-text">Start anywhere</strong>
+        <p id="save-status" role="status">
+          Progress saves automatically in this browser.
+        </p>
+      </section>
+      <details class="progress-tools">
+        <summary>Manage saved progress</summary>
+        <p>
+          India progress stays in this browser on this device, separately from
+          California and Europe. Clearing site data removes it. Download a
+          backup to keep a copy or move devices.
+        </p>
+        <div class="progress-actions">
+          <button class="secondary-button" id="export-progress" type="button">
+            Download backup</button
+          ><label class="secondary-button import-label" for="import-progress"
+            >Restore backup</label
+          ><input
+            class="sr-only"
+            id="import-progress"
+            type="file"
+            accept="application/json,.json"
+          /><button class="quiet-button" id="reset-progress" type="button">
+            Reset India progress
+          </button>
+        </div>
+        <p>
+          Restoring merges card history and keeps the newer review for each
+          card.
+        </p>
+      </details>
+      <section class="section decks-section" id="decks">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Learn the national core</p>
+            <h2>Choose a driving skill.</h2>
+          </div>
+          <p>
+            Study a complete deck or take a mixed session. Return to cards you
+            are still practicing.
+          </p>
+        </div>
+        <div class="deck-grid" id="deck-grid"></div>
+      </section>
+      <section class="section library-section" id="library">
+        <div class="section-heading library-heading">
+          <div>
+            <p class="eyebrow">Your roadbook</p>
+            <h2>Find the rule you need.</h2>
+          </div>
+          <label class="search-box"
+            ><span class="sr-only">Search cards</span
+            ><input
+              id="search-input"
+              type="search"
+              placeholder="Search “learner”, “overtake”, “helmet”…"
+          /></label>
+        </div>
+        <div
+          class="filter-row"
+          id="filter-row"
+          aria-label="Filter flashcards"
+        ></div>
+        <div class="library-tools">
+          <label for="status-filter"
+            >Show cards<select id="status-filter">
+              <option value="all">All progress</option>
+              <option value="unseen">Not studied yet</option>
+              <option value="due">Due for review</option>
+              <option value="learning">Still practicing</option>
+              <option value="confident">Feeling confident</option>
+            </select></label
+          ><button class="secondary-button" id="study-results" type="button">
+            Study these cards
+          </button>
+        </div>
+        <p class="results-count" id="results-count" aria-live="polite"></p>
+        <div class="card-library" id="card-library"></div>
+        <button class="secondary-button load-more" id="load-more" type="button">
+          Show more cards
+        </button>
+      </section>
+      <section class="section sources-section" id="sources">
+        <p class="eyebrow">Official sources · reviewed October 17, 2026</p>
+        <h2>Follow the source.</h2>
+        <p>
+          Cards cite the Motor Vehicles Act, MoRTH driving regulations,
+          Parivahan services, and official government road-safety resources.
+          National guidance does not replace a posted limit or a state-specific
+          requirement.
+        </p>
+        <div class="source-links">
+          <a href="https://parivahan.gov.in/" target="_blank" rel="noreferrer"
+            >Parivahan services ↗</a
+          ><a href="https://morth.nic.in/" target="_blank" rel="noreferrer"
+            >MoRTH ↗</a
+          ><a
+            href="https://www.indiacode.nic.in/"
+            target="_blank"
+            rel="noreferrer"
+            >India Code ↗</a
+          >
+        </div>
+        <p class="attribution">
+          Independent educational guide, not affiliated with MoRTH, Parivahan,
+          or any transport department. Original study wording; source links
+          appear on each answer.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <a class="brand" href="#top"
+        ><span><strong>India</strong><small>Roadbook</small></span></a
+      >
+      <p>Understand the move. Share the road.</p>
+      <p>National core · <span id="current-year"></span></p>
+    </footer>
+    <dialog
+      class="study-dialog"
+      id="study-dialog"
+      aria-labelledby="study-deck-label"
+      aria-describedby="study-position"
+    >
+      <div class="study-shell">
+        <header class="study-header">
+          <div>
+            <p class="study-kicker" id="study-deck-label">India practice</p>
+            <strong id="study-position">Card 1 of 10</strong>
+          </div>
+          <div class="study-progress" aria-hidden="true">
+            <span id="study-progress-bar"></span>
+          </div>
+          <button
+            class="icon-button close-study"
+            id="close-study"
+            type="button"
+            aria-label="Close study session"
+          >
+            ×
+          </button>
+        </header>
+        <div class="study-stage" id="study-stage" aria-live="polite"></div>
+        <div class="study-controls" id="study-controls"></div>
+        <p class="keyboard-hint">
+          Space: reveal · 1: again · 2: almost · 3: got it · Esc: save and close
+        </p>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="cards.js?v=20261017-1"></script>
+    <script src="guide.js?v=20261017-1"></script>
+    <script src="../progress.js?v=20261017-1"></script>
+    <script src="../app.js?v=20261017-1"></script>
+  </body>
+</html>
